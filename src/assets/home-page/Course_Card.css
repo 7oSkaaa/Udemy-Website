@@ -1,0 +1,78 @@
+.course-item {
+    width: 23.2rem;
+    display: inline-flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.course-item h3 {
+    font-size: 1.6rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.4rem;
+    min-height: 3.8rem;
+    max-height: 3.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 600px) {
+    .course-item {
+        width: calc((100% - (2 - 1) * 1.6rem) / 2);
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .course-item {
+        width: calc((100% - (3 - 1) * 1.6rem) / 3);
+    }
+}
+
+@media screen and (min-width: 970px) {
+    .course-item {
+        width: calc((100% - (4 - 1) * 1.6rem) / 4);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .course-item {
+        width: calc((100% - (5 - 1) * 1.6rem) / 5);
+    }
+}
+
+.author {
+    font-size: 1.2rem;
+    color: #1c1d1f;
+    margin-bottom: 0.4rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    min-height: 1.68rem;
+}
+
+.rating {
+    display: flex;
+    margin-bottom: 0.4rem;
+}
+
+.rating-score {
+    color: #b4690e;
+    font-weight: 700;
+    margin-right: 0.4rem;
+    font-size: 1.4rem;
+}
+
+.star img {
+    height: 1.4rem;
+}
+
+.rating-n {
+    margin-left: 0.4rem;
+    font-size: 1.2rem;
+    color: #6a6f73;
+}
+
+.price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
