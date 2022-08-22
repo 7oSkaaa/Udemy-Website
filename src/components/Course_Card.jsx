@@ -12,6 +12,7 @@ export default function CourseCard({course}){
                 <span className="stars"><Stars rating={course.rating}/></span>
                 <p className="rating-n">({course.people.toLocaleString('en-US')})</p>
             </div>
+            <p className="price">E£{course.price.toLocaleString('en-US')}</p>
         </div>
     );
 }
