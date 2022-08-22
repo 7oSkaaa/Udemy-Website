@@ -5,15 +5,14 @@ import data from "./db.json"
 
 function App() {
   
-  let {header,description,category} = data;
+    let {header,description,category, courses} = data;
   
-  return (
-    <div style={{padding : '1rem 11.4rem '}}> 
-        <CoursesContent  header = {header} description = {description} category = {category} >
-            {data.courses.map(course => <CourseCard  course = {course} key = {course.id}/>)}
-        </CoursesContent>
-    </div>
-  );
+    return (
+        <div> 
+            <CoursesContent  header = {header} description = {description} category = {category} courses = {courses}> 
+            </CoursesContent>
+        </div>
+    );
 }
 
 export default App;

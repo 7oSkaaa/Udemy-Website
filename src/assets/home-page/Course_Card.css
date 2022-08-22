@@ -1,68 +1,58 @@
 .course-item {
-    width: 23.2rem;
+    width: 22%;
     display: inline-flex;
     flex-direction: column;
     cursor: pointer;
 }
 
 .course-item h3 {
-    font-size: 1.6rem;
+    font-size: 1rem;
     margin-top: 0.8rem;
     margin-bottom: 0.4rem;
-    min-height: 3.8rem;
-    max-height: 3.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-@media screen and (min-width: 600px) {
-    .course-item {
-        width: calc((100% - (2 - 1) * 1.6rem) / 2);
-    }
-}
-
-@media screen and (min-width: 700px) {
-    .course-item {
-        width: calc((100% - (3 - 1) * 1.6rem) / 3);
-    }
-}
-
-@media screen and (min-width: 970px) {
-    .course-item {
-        width: calc((100% - (4 - 1) * 1.6rem) / 4);
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .course-item {
-        width: calc((100% - (5 - 1) * 1.6rem) / 5);
-    }
-}
-
-.author {
-    font-size: 1.2rem;
-    color: #1c1d1f;
-    margin-bottom: 0.4rem;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    min-height: 1.68rem;
 }
 
 .rating {
-    display: flex;
-    margin-bottom: 0.4rem;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0rem 0rem;
+    height: auto;
+}
+
+.rating p {
+    font-size: 0.8rem;
+    margin: 0rem 0.2rem;
 }
 
 .rating-score {
-    color: #b4690e;
+    font-size: 0.9rem !important;
+}
+
+.rating-score,
+.stars {
+    color: orange;
+}
+
+.author {
+    font-size: 0.8rem;
+    color: grey;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0.2rem 0.2rem;
+}
+
+.rating-score {
+    color: #d67c0e;
     font-weight: 700;
     margin-right: 0.4rem;
     font-size: 1.4rem;
-}
-
-.star img {
-    height: 1.4rem;
 }
 
 .rating-n {
@@ -71,8 +61,40 @@
     color: #6a6f73;
 }
 
+.stars {
+    align-items: center;
+    font-size: 1rem;
+}
+
 .price {
     font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 0.8rem;
+}
+
+@media only screen and (max-width: 1080px) {
+    .course-item {
+        width: 30%;
+    }
+    .courses_content_descreption p {
+        font-size: 1rem !important;
+    }
+    .courses_content_descreption h2 {
+        font-size: 1.5rem !important;
+    }
+    .explore {
+        font-size: 1rem !important;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .course-item {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .course-item {
+        width: 100%;
+    }
 }

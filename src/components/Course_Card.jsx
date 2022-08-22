@@ -8,7 +8,8 @@ export default function CourseCard({course}){
             <h3>{course.title}</h3>
             <p className="author">{course.instructors[0].name}</p>
             <div className="rating">
-                <p className="rating-score">{course.rating.toFixed(1)}</p><span className="star"><Stars rating={course.rating}/></span>
+                <span><p className="rating-score">{course.rating.toFixed(1)}</p></span>
+                <span className="stars"><Stars rating={course.rating}/></span>
                 <p className="rating-n">({course.people.toLocaleString('en-US')})</p>
             </div>
         </div>
