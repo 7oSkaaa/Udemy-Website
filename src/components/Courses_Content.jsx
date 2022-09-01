@@ -1,6 +1,7 @@
+import React from 'react';
 import '../assets/home-page/Courses_Content.css';
 import '../assets/home-page/Course_Card.css';
-import CourseCard from './Course_Card';
+import CourseCard from './Course_Card.jsx';
 
 export default function CoursesContent({header,description,category,courses}){
     return (
@@ -14,5 +15,5 @@ export default function CoursesContent({header,description,category,courses}){
                 {courses.map(course => <CourseCard  course = {course}/>)}
             </div>
         </div>
-    )
+    );
 }

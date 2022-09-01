@@ -1,6 +1,6 @@
+import React from 'react';
 import './assets/App.css';
-import CourseCard from './components/Course_Card';
-import CoursesContent from './components/Courses_Content';
+import CoursesContent from './components/Courses_Content.jsx';
 import data from "./db.json"
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     let {header,description,category, courses} = data;
   
     return (
-        <div> 
+        <div>
             <CoursesContent  header = {header} description = {description} category = {category} courses = {courses}> 
             </CoursesContent>
         </div>

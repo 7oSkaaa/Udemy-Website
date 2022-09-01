@@ -1,3 +1,4 @@
+import React from 'react';
 import '../assets/home-page/Course_Card.css';
 import Stars from './Stars';
 
