@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/udemy-home-page-React/static/js/runtime~main.44c853c1.js"
   },
   {
-    "revision": "1e7e7f9bba12d2b8c11fab8bb277d652",
+    "revision": "bb7776d8887017e51f02aefe9c2d13d5",
     "url": "/udemy-home-page-React/index.html"
   }
 ];
