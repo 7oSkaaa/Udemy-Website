@@ -1,8 +1,9 @@
 .course-item {
-    width: 22%;
+    width: 24%;
     display: inline-flex;
     flex-direction: column;
     cursor: pointer;
+    margin-bottom: 1rem;
 }
 
 .course-item h3 {
@@ -90,6 +91,12 @@
 @media only screen and (max-width: 800px) {
     .course-item {
         width: 45%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .course-item {
+        margin: 1rem auto;
     }
 }
 

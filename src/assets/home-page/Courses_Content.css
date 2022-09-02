@@ -54,10 +54,31 @@
 .courses_cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.6rem;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1400px) {
+    .courses_content {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .courses_content {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .courses_content {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 600px) {
+    .courses_content {
+        padding: 1rem;
+    }
     .courses-header {
         display: none;
     }
