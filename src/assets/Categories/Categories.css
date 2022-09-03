@@ -1,0 +1,27 @@
+.container {
+    display: grid;
+}
+
+figure img {
+    transition: all .2s ease-in-out;
+}
+
+figure img:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    width: 100% !important;
+}
+
+@media only screen and (max-width: 500px) {
+    .card-img-top {
+        width: 100% !important;
+    }
+    .card {
+        width: auto !important;
+    }
+    .card-title {
+        font-size: 1.2rem !important;
+    }
+}

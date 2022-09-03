@@ -5,7 +5,7 @@ import '../../assets/Nav_Bar/navbar.css';
 
 export default function NavBar (){
     return (
-        <nav class="navbar">
+        <nav className="_navbar">
             <NavItems />
             <NavButtons />
         </nav>

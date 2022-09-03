@@ -4,6 +4,9 @@ import '../../assets/home-page/Course_Card.css';
 import CourseCard from './Course_Card.jsx';
 
 export default function CoursesContent({header,description,category,courses}){
+
+    const Courses_Cards = courses.map(course => <CourseCard  course = {course}/>);
+
     return (
         <div className="courses_content">
             <div className="courses_content_descreption">
@@ -12,7 +15,7 @@ export default function CoursesContent({header,description,category,courses}){
                 <a className="explore" href="./index.html">Explore {category}</a>
             </div>
             <div className="courses_cards">
-                {courses.map(course => <CourseCard  course = {course}/>)}
+                {Courses_Cards}
             </div>
         </div>
     );

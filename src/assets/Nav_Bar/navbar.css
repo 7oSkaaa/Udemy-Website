@@ -4,7 +4,7 @@ ul {
     flex-grow: 1;
 }
 
-.navbar {
+._navbar {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
@@ -26,13 +26,14 @@ ul {
     width: 5rem;
 }
 
-.nav-items {
+._nav-items {
     margin: 0.5rem;
     flex-direction: row;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
+    padding: 1rem;
 }
 
 form {
@@ -40,6 +41,7 @@ form {
     position: relative;
     display: flex;
     align-items: center;
+    background: none;
 }
 
 input {
@@ -53,21 +55,23 @@ input:focus {
     text-decoration: none;
 }
 
-nav label,
+._navbar label,
 .shopping-cart {
     color: black;
     text-decoration: none;
 }
 
-nav label:hover,
+._navbar label:hover,
 .shopping-cart:hover {
     color: purple;
+    text-decoration: none;
 }
 
-nav label {
-    width: 3rem;
+._navbar label {
+    width: auto;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+    font-weight: 440;
 }
 
 .search-container {
@@ -102,7 +106,7 @@ nav label {
     color: purple;
 }
 
-.navbar-category {
+._navbar-category {
     margin-left: 1rem;
     margin-right: 0.5rem;
 }
@@ -121,35 +125,35 @@ nav label {
     outline: none;
 }
 
-#reg {
+#_reg {
     background: black;
     color: white;
     font-size: 0.8rem;
     font-weight: bold;
 }
 
-#log {
+#_log {
     font-weight: bold;
     font-size: 0.8rem;
     background: white;
 }
 
-#language {
+#_language {
     width: 3rem;
     background: none;
     font-weight: bold;
 }
 
-#log:hover,
-#language:hover {
+#_log:hover,
+#_language:hover {
     background: whitesmoke;
 }
 
-[class^="navbar__"]:not(:last-child) {
+[class^="_navbar__"]:not(:last-child) {
     margin: 0 10px;
 }
 
-.navbar>nav {
+._navbar>nav {
     padding: 0 2.4rem;
     position: relative;
 }
@@ -163,9 +167,13 @@ nav label {
     width: 9rem;
 }
 
+.material-symbols-outlined {
+    line-height: 1.4 !important;
+}
+
 @media only screen and (max-width: 800px) {
     .disappear-item,
-    .navbar-category {
+    ._navbar-category {
         display: none;
     }
     .menu {
@@ -177,9 +185,12 @@ nav label {
     .menu:hover {
         color: purple;
     }
-    .navbar {
+    ._navbar {
         height: 4rem;
-        padding: 0rem 2rem;
+        padding: 0rem 1rem;
+    }
+    ._nav-items {
+        padding: 0rem 0rem;
     }
     #teach-udemy,
     #udemy-bus,
@@ -204,7 +215,7 @@ nav label {
     #udemy-bus {
         display: none;
     }
-    .navbar {
+    ._navbar {
         width: 100%;
     }
 }
@@ -216,7 +227,7 @@ nav label {
     .search-container {
         width: auto;
     }
-    .navbar {
+    ._navbar {
         width: 100%;
     }
 }
