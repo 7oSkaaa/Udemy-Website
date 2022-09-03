@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/udemy-home-page-React/precache-manifest.ca9483597fbe776eab1fe1a6d3df1a2e.js"
+  "/udemy-home-page-React/precache-manifest.8ffbb0e78118fbaa012c24860bcc43a5.js"
 );
 
 workbox.clientsClaim();
