@@ -3,8 +3,8 @@
     border-width: 1px;
     border-style: solid;
     border-color: #d1d7dc;
-    width: 60%;
     margin: auto;
+    width: auto;
 }
 
 .courses_content_descreption h2 {

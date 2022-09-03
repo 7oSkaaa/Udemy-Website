@@ -1,16 +1,14 @@
 import React from 'react';
 import './assets/App.css';
-import CoursesContent from './components/Courses_Content.jsx';
-import data from "./db.json"
+import NavBar from './components/Nav_Bar/NavBar.jsx';
+import Section from './components/Section.jsx';
 
 function App() {
-  
-    let {header,description,category, courses} = data;
-  
+    
     return (
         <div>
-            <CoursesContent  header = {header} description = {description} category = {category} courses = {courses}> 
-            </CoursesContent>
+            <NavBar />
+            <Section />
         </div>
     );
 }

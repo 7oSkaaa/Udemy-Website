@@ -1,2 +1,10 @@
-@import "./Layout/index.css";
-@import "./Layout/navbar.css";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+body {
+    height: 2vh;
+}
