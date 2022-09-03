@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../assets/home-page/Courses_Content.css';
-import '../../assets/home-page/Course_Card.css';
+import './Courses_Content.css';
+import './Course_Card.css';
 import CourseCard from './Course_Card.jsx';
 
 export default function CoursesContent({header,description,category,courses}){

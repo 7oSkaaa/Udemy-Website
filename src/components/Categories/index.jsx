@@ -1,6 +1,5 @@
 import React from "react";
 import Category from "./Category";
-import "../../assets/Categories/Categories.css";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.css';

@@ -1,5 +1,5 @@
 import React from "react";
-import '../../assets/Nav_Bar/navbar.css';
+import './navbar.css';
 export default function NavButtons() {
     return (
         <div className="nav-buttons disappear-item">

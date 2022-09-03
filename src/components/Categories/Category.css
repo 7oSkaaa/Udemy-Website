@@ -1,7 +1,3 @@
-.container {
-    display: grid;
-}
-
 figure img {
     transition: all .2s ease-in-out;
 }

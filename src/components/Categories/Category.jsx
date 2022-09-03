@@ -1,6 +1,7 @@
 import React from "react";
 import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.css';
+import './Category.css';
 
 export default function Category({category}) {
 
