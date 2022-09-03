@@ -1,0 +1,27 @@
+section {
+    width: 85rem;
+    margin: auto;
+}
+
+@media only screen and (max-width: 1400px) {
+    section {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    section {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    section {
+        width: 100%;
+    }
+    .above-courses {
+        font-size: 1rem;
+        width: 100%;
+        padding-left: 1rem;
+    }
+}

@@ -1,0 +1,109 @@
+.alarmphoto {
+    width: 35%;
+}
+
+.head-continer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 85rem;
+    position: relative;
+    background-color: #F8F9FB;
+    margin: auto;
+    padding: 1rem 2rem;
+}
+
+.head-bar {
+    background-color: white;
+    width: 30rem;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    margin-top: 3rem;
+    font-family: 'Tiro Gurmukhi', serif;
+    height: 12rem;
+}
+
+.head-bar h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.head-bar h3 {
+    font-size: 1.2rem;
+}
+
+.above-courses {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: 'Tiro Gurmukhi', serif;
+    font-size: 1.5rem;
+    margin: 2rem 0rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .head-bar {
+        width: 25rem;
+    }
+    .alarmphoto {
+        width: 40%;
+    }
+    .head-continer {
+        margin: 0rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .head-continer {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: auto;
+        margin: 0rem 0rem;
+        padding: 0rem 0rem;
+    }
+    .head-bar {
+        width: 100%;
+        margin: 0rem 0rem;
+        box-shadow: none;
+    }
+    .alarmphoto {
+        width: 80%;
+    }
+    .head-bar h1 {
+        font-size: 2rem;
+    }
+    .head-bar h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .head-bar h1 {
+        font-size: 1.5rem;
+    }
+    .head-bar h3 {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .head-continer {
+        width: 100%;
+        margin: 0rem 0rem;
+    }
+    .head-bar {
+        height: 50%;
+        margin-top: 0rem;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .head-continer {
+        width: 100%;
+    }
+    .head-bar {
+        height: 100%;
+    }
+}
