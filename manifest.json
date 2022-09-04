@@ -1,0 +1,13 @@
+{
+    "short_name": "Udemy",
+    "name": "Udemy",
+    "icons": [{
+        "src": "https://i.postimg.cc/rFfXCsQx/Untitled-2.png",
+        "sizes": "192x192",
+        "type": "image/x-icon"
+    }],
+    "start_url": "./index.html",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+}
