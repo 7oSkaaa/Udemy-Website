@@ -4,7 +4,6 @@
     flex-direction: column;
     cursor: pointer;
     margin-bottom: 1rem;
-    height: auto;
 }
 
 .course-item h3 {
@@ -110,8 +109,5 @@
 @media only screen and (max-width: 500px) {
     .course-item {
         width: 100%;
-    }
-    .course-img {
-        height: 50%;
     }
 }
