@@ -4,6 +4,8 @@
     flex-direction: column;
     cursor: pointer;
     margin-bottom: 1rem;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .course-item h3 {
@@ -16,11 +18,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: bold;
-}
-
-.course-img {
-    max-height: fit-content;
-    width: auto;
 }
 
 .rating {
@@ -107,7 +104,11 @@
 }
 
 @media only screen and (max-width: 500px) {
+    .course-img {
+        height: 50%;
+    }
     .course-item {
-        width: 100%;
+        width: auto;
+        height: auto;
     }
 }
