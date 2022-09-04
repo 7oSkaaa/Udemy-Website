@@ -4,6 +4,7 @@
     flex-direction: column;
     cursor: pointer;
     margin-bottom: 1rem;
+    height: auto;
 }
 
 .course-item h3 {
@@ -15,6 +16,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-weight: bold;
 }
 
 .rating {

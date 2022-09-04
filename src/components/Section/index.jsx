@@ -7,12 +7,11 @@ import './Section.css';
 export default function Section() {
 
     let {header, description, category, courses} = data;
-
+    
     return (
         <section>
             <HeaderSection /> 
-            <CoursesContent  header = {header} description = {description} category = {category} courses = {courses} /> 
+            <CoursesContent id="rendered_courses" header = {header} description = {description} category = {category} courses = {courses} /> 
         </section>
     );
-
 }

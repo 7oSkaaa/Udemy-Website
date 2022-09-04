@@ -177,6 +177,7 @@ input:focus {
         display: none;
     }
     .menu {
+        color: black;
         background: none;
         border: none;
         font-size: 1.2rem;
@@ -187,7 +188,7 @@ input:focus {
     }
     ._navbar {
         height: 4rem;
-        padding: 0rem 1rem;
+        padding: 0rem 0.5rem;
     }
     ._nav-items {
         padding: 0rem 0rem;
