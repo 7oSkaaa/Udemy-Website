@@ -15,6 +15,9 @@ export default function Section({SearchTerm}) {
             .then((res) => {
                 set_courses_db(res.record);
                 set_data_is_fetched(true);
+            })
+            .catch((err) => {
+                console.log(`Error while fetching data: ${err.message}`);
             });
     }, []);
 
