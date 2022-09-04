@@ -20,7 +20,7 @@
 }
 
 .course-img {
-    height: auto;
+    max-height: fit-content;
     width: auto;
 }
 
@@ -110,5 +110,8 @@
 @media only screen and (max-width: 500px) {
     .course-item {
         width: 100%;
+    }
+    .course-img {
+        height: 80%;
     }
 }
