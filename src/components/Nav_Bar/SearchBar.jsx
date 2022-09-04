@@ -1,26 +1,30 @@
 import React, { useState } from "react";
 import './navbar.css';
 
-export default function SearchBar() {
+export default function SearchBar({setSearchTerm, SearchTerm}) {
     
-    const [value, setValue] = useState('');
+    const [value, setValue] = useState(SearchTerm);
 
     const onChange = (event) => {
-        event.preventDefault();
         setValue(event.target.value);
+        event.preventDefault();
     }
 
     const onSearch = (searchTerm) => {
-        // to do
+        setSearchTerm(searchTerm);
+    }
+
+    const keyboardPress = (event) => {
+        if (event.key === 'Enter') onSearch(event.target.value);
     }
 
     return (
 
         <li className="search-container disappear-item">
-            <form onSubmit={onChange}>
+            <div className="_form" onKeyDown={keyboardPress}>
                 <button className="search-icon" onClick={() => onSearch(value)}><span className="material-symbols-outlined">search</span></button>
-                <input className="search-bar _nav-item menu-item" type="text" placeholder="Search for anything" name="search" value={value} onChange={onChange} required/>
-            </form>
+                <input className="search-bar _nav-item menu-item" type="text" placeholder="Search for anything" name="search" value={value || ''} onChange={onChange} required/>
+            </div>
         </li>
     )
 }

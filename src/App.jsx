@@ -6,10 +6,12 @@ import Categories from './components/Categories';
 
 function App() {
     
+    const [SearchTerm, setSearchTerm] = React.useState('');
+
     return (
         <div>
-            <NavBar />
-            <Section />
+            <NavBar SearchTerm={SearchTerm} setSearchTerm={setSearchTerm}/>
+            <Section SearchTerm={SearchTerm}/>
             <Categories />
         </div>
     );

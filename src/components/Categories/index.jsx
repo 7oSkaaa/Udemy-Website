@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 export default function Categories() {
 
     const categories = ['Design', 'Development', 'Marketing', 'IT and Software', 'Personal Development', 'Business', 'Photography', 'Music'];
-    const categoryList = categories.map(category => <Category  category = {category}/>);
+    const categoryList = categories.map((category, idx) => <Category key={idx} category = {category}/>);
 
     return (
         <section>
