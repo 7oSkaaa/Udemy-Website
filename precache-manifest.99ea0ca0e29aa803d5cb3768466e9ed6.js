@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "247c901ce25ddb2cdff7",
-    "url": "/udemy-home-page-React/static/css/main.001bb750.chunk.css"
+    "revision": "a24b057563671ab88e0a",
+    "url": "/udemy-home-page-React/static/css/main.6c45157a.chunk.css"
   },
   {
-    "revision": "247c901ce25ddb2cdff7",
+    "revision": "a24b057563671ab88e0a",
     "url": "/udemy-home-page-React/static/js/main.89222bfd.chunk.js"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/udemy-home-page-React/static/js/2.9117e9d1.chunk.js"
   },
   {
-    "revision": "db00f39033396fc7752fbc4e3e96e2af",
+    "revision": "ddc7b8ddfaa98314cd99991e3966b5f3",
     "url": "/udemy-home-page-React/index.html"
   }
 ];

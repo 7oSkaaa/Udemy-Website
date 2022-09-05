@@ -1,5 +1,5 @@
 {
-  "main.css": "/udemy-home-page-React/static/css/main.001bb750.chunk.css",
+  "main.css": "/udemy-home-page-React/static/css/main.6c45157a.chunk.css",
   "main.js": "/udemy-home-page-React/static/js/main.89222bfd.chunk.js",
   "main.js.map": "/udemy-home-page-React/static/js/main.89222bfd.chunk.js.map",
   "runtime~main.js": "/udemy-home-page-React/static/js/runtime~main.0a258be4.js",
@@ -8,8 +8,8 @@
   "static/js/2.9117e9d1.chunk.js": "/udemy-home-page-React/static/js/2.9117e9d1.chunk.js",
   "static/js/2.9117e9d1.chunk.js.map": "/udemy-home-page-React/static/js/2.9117e9d1.chunk.js.map",
   "index.html": "/udemy-home-page-React/index.html",
-  "precache-manifest.3484b99d793e727cd352a3f27a994282.js": "/udemy-home-page-React/precache-manifest.3484b99d793e727cd352a3f27a994282.js",
+  "precache-manifest.99ea0ca0e29aa803d5cb3768466e9ed6.js": "/udemy-home-page-React/precache-manifest.99ea0ca0e29aa803d5cb3768466e9ed6.js",
   "service-worker.js": "/udemy-home-page-React/service-worker.js",
   "static/css/2.0987b8a5.chunk.css.map": "/udemy-home-page-React/static/css/2.0987b8a5.chunk.css.map",
-  "static/css/main.001bb750.chunk.css.map": "/udemy-home-page-React/static/css/main.001bb750.chunk.css.map"
+  "static/css/main.6c45157a.chunk.css.map": "/udemy-home-page-React/static/css/main.6c45157a.chunk.css.map"
 }
