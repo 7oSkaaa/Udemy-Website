@@ -1,0 +1,24 @@
+.loader-background {
+    background-color: white;
+}
+
+.loader {
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+}
+
+@media only screen and (max-width: 800px) {
+    .loader {
+        top: 50%;
+        left: 45%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .loader {
+        top: 50%;
+        left: 40%;
+    }
+}

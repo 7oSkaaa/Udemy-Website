@@ -1,7 +1,7 @@
 import React from "react";
 import CoursesContent from './Courses_Section/Courses_Content';
 import HeaderSection from "./Header/HeaderSection";
-import Loader from "../Loading";
+import Loader from "../Loader";
 import './Section.css';
 
 export default function Section({SearchTerm}) {

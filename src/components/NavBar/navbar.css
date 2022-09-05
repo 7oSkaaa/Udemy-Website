@@ -120,6 +120,7 @@ input:focus {
 }
 
 .nav-buttons button {
+    border: 1px solid black;
     margin-left: 10px;
     width: 80px;
     outline: none;
