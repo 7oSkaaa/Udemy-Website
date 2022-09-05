@@ -30,7 +30,7 @@ export default function Section({SearchTerm}) {
 
     return (
         <section>
-            <HeaderSection /> 
+            <HeaderSection/> 
             {
                 data_is_fetched ?  <CoursesContent header={header} description={description} category={category} courses={courses} SearchTerm={SearchTerm}/> : <Loader/>
             }

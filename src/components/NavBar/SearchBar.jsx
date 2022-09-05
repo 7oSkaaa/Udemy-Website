@@ -12,6 +12,8 @@ export default function SearchBar({setSearchTerm, SearchTerm}) {
 
     const onSearch = (searchTerm) => {
         setSearchTerm(searchTerm);
+        const element = document.getElementById("rendered_courses");
+        element.scrollIntoView({behavior:"smooth", block: "start", inline:"nearest"});
     }
 
     const keyboardPress = (event) => {

@@ -9,7 +9,7 @@ export default function CoursesContent({header,description,category,courses, Sea
     const Courses_Cards = Filtered_Courses.map((course, idx) => <CourseCard key={idx} course = {course}/>);
 
     return (
-        <div className="courses_content">
+        <div className="courses_content" id="rendered_courses">
             <div className="courses_content_descreption">
                 <h2>{header}</h2>
                 <p>{description}</p>
