@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import Section from './components/Section';
 import Categories from './components/Categories';
+import Footer from './components/Footer';
 
 function App() {
     
@@ -11,8 +12,9 @@ function App() {
     return (
         <div>
             <NavBar SearchTerm={SearchTerm} setSearchTerm={setSearchTerm}/>
-            <Section SearchTerm={SearchTerm} key={'coursesKey'}/>
-            <Categories key={'categoryKey'}/>
+            <Section SearchTerm={SearchTerm}/>
+            <Categories/>
+            <Footer/>
         </div>
     );
 }
