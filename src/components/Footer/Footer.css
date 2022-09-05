@@ -44,3 +44,19 @@
     border: 1px solid white;
     padding-left: 1.5rem;
 }
+
+@media only screen and (max-width: 500px) {
+    ._footer {
+        flex-direction: column;
+        height: 16rem;
+        justify-content: space-evenly;
+    }
+    .left_footer img {
+        position: relative;
+    }
+    .right_footer {
+        margin: 0;
+        padding: 0;
+        gap: 2rem;
+    }
+}
