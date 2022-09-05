@@ -31,10 +31,7 @@ export default function Categories() {
 
     return (
         <section>
-            {
-                is_data_fetched ? <CategoriesSections categories={categoryList}/> : <Loader/>
-                    
-            }
+            { is_data_fetched ? <CategoriesSections categoryList={categoryList}/> : <Loader/> }
         </section>
     )
 
