@@ -1,7 +1,6 @@
 import React from 'react';
 import './CoursesContent.css';
-import './CourseCard.css';
-import CourseCard from './CourseCard.jsx';
+import CourseCard from './CourseCard';
 
 export default function CoursesContent({tab, SearchTerm}) {
     

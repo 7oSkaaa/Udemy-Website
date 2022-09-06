@@ -3,7 +3,7 @@ import CoursesContent from './CoursesSection/CoursesContent';
 import HeaderSection from "./Header/HeaderSection";
 import Loader from "../Loader";
 import './Section.css';
-import Tabs from './CoursesSection/Tabs';
+import Tabs from './Tabs';
 
 export default function Section({SearchTerm}) {
     
