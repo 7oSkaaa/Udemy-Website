@@ -8,5 +8,7 @@
     letter-spacing: -.02rem;
     max-width: fit-content;
     max-height: fit-content;
-    margin: 0.5rem 0rem 0rem 0.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+    margin-left: 0rem;
 }
