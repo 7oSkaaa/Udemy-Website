@@ -100,6 +100,6 @@
 
 @media only screen and (max-width: 600px) {
     .course-item {
-        margin: 1rem auto;
+        margin: auto 0rem;
     }
 }

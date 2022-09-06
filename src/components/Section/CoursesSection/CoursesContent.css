@@ -121,3 +121,12 @@
         top: 25%;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .react-multiple-carousel__arrow {
+        width: 2rem !important;
+        min-width: 2vh !important;
+        max-height: fit-content;
+        top: calc(27% + 1px);
+    }
+}
