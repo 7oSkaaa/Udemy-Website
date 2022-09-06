@@ -1,0 +1,88 @@
+.tippy_card {
+    background-color: white;
+    color: black;
+    border: 1px solid #d1d7dc;
+    padding: 1.5rem;
+    max-width: 400px !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.grey_p {
+    color: rgb(100, 100, 100);
+    font-size: 0.72rem;
+    font-weight: 500;
+    margin: 1rem 0rem;
+    word-spacing: -0.3em;
+}
+
+.headline {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.objectives {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.objective {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.course_card_hover h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.course_card_hover {
+    width: 100%;
+}
+
+.hoverbuttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+    align-items: flex-end;
+}
+
+._fav {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    background: none;
+    border: 1px solid black;
+    font-size: 2rem;
+}
+
+.fav_icon {
+    font-size: 1.9rem;
+    color: black;
+    font-weight: 500;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+._cart {
+    width: 16rem;
+    height: 4rem;
+    background: #932bd8;
+    color: white;
+    border: 0.5px solid #d1d7dc;
+    font-size: 1rem;
+    font-weight: 1000;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.last_update {
+    color: #12663d;
+}
+
+.tippy-arrow {
+    color: #d1d7dc;
+}

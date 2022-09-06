@@ -1,5 +1,5 @@
 import React from "react";
-import CoursesContent from './Courses_Section/Courses_Content';
+import CoursesContent from './CoursesSection/CoursesContent';
 import HeaderSection from "./Header/HeaderSection";
 import Loader from "../Loader";
 import './Section.css';

@@ -1,7 +1,7 @@
 import React from 'react';
-import './Courses_Content.css';
-import './Course_Card.css';
-import CourseCard from './Course_Card.jsx';
+import './CoursesContent.css';
+import './CourseCard.css';
+import CourseCard from './CourseCard.jsx';
 
 export default function CoursesContent({header, description, category, courses, SearchTerm}) {
 
