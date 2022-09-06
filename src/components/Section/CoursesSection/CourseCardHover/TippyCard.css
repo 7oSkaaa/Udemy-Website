@@ -60,6 +60,14 @@
     font-size: 2rem;
 }
 
+._fav:hover {
+    background: whitesmoke;
+}
+
+._cart:hover {
+    background: #692497;
+}
+
 .fav_icon {
     font-size: 1.9rem;
     color: black;
