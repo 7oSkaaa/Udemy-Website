@@ -1,15 +1,13 @@
 {
-  "main.css": "/udemy-home-page-React/static/css/main.1be27727.chunk.css",
-  "main.js": "/udemy-home-page-React/static/js/main.096f8789.chunk.js",
-  "main.js.map": "/udemy-home-page-React/static/js/main.096f8789.chunk.js.map",
-  "runtime~main.js": "/udemy-home-page-React/static/js/runtime~main.0a258be4.js",
-  "runtime~main.js.map": "/udemy-home-page-React/static/js/runtime~main.0a258be4.js.map",
-  "static/css/2.0987b8a5.chunk.css": "/udemy-home-page-React/static/css/2.0987b8a5.chunk.css",
-  "static/js/2.e9aee7f9.chunk.js": "/udemy-home-page-React/static/js/2.e9aee7f9.chunk.js",
-  "static/js/2.e9aee7f9.chunk.js.map": "/udemy-home-page-React/static/js/2.e9aee7f9.chunk.js.map",
-  "index.html": "/udemy-home-page-React/index.html",
-  "precache-manifest.a2fef46e7067a8d3eb8139e59dddbce4.js": "/udemy-home-page-React/precache-manifest.a2fef46e7067a8d3eb8139e59dddbce4.js",
-  "service-worker.js": "/udemy-home-page-React/service-worker.js",
-  "static/css/2.0987b8a5.chunk.css.map": "/udemy-home-page-React/static/css/2.0987b8a5.chunk.css.map",
-  "static/css/main.1be27727.chunk.css.map": "/udemy-home-page-React/static/css/main.1be27727.chunk.css.map"
+  "files": {
+    "main.css": "/udemy-home-page-React/static/css/main.407d6224.css",
+    "main.js": "/udemy-home-page-React/static/js/main.3a0ddf14.js",
+    "index.html": "/udemy-home-page-React/index.html",
+    "main.407d6224.css.map": "/udemy-home-page-React/static/css/main.407d6224.css.map",
+    "main.3a0ddf14.js.map": "/udemy-home-page-React/static/js/main.3a0ddf14.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.407d6224.css",
+    "static/js/main.3a0ddf14.js"
+  ]
 }
