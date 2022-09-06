@@ -5,7 +5,7 @@
     flex-grow: 1;
     gap: 2rem;
     margin: 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .courses-tab label {
@@ -24,4 +24,10 @@
 
 .courses-tab>input[type="radio"]:hover+label {
     color: black;
+}
+
+@media only screen and (max-width: 500px) {
+    .courses-tab {
+        font-size: 0.8rem;
+    }
 }
