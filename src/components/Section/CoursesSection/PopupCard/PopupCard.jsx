@@ -3,6 +3,7 @@ import ObjComp from './ObjComp';
 import Date from './Date';
 import Badge from '../Badge';
 
+
 export default function PopupCard({course}){
 
     const Badges = course.badges.map((badge, idx) => <Badge key={idx} badge_text={badge.badge_text}/>);

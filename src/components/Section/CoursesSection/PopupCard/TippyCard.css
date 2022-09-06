@@ -1,11 +1,11 @@
-.tippy_card {
+.course_card_hover {
     background-color: white;
     color: black;
     border: 1px solid #d1d7dc;
     padding: 1.5rem;
-    max-width: 400px !important;
     display: flex;
     flex-direction: column;
+    position: absolute;
 }
 
 .seller_info {
@@ -47,16 +47,13 @@
     font-weight: bold;
 }
 
-.course_card_hover {
-    width: 100%;
-}
-
 .hoverbuttons {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 1rem;
     align-items: flex-end;
+    gap: 1rem;
 }
 
 ._fav {

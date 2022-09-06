@@ -1,11 +1,16 @@
 .course-item {
-    width: 24%;
+    width: 90%;
     display: inline-flex;
     flex-direction: column;
     cursor: pointer;
     margin-bottom: 1rem;
     max-height: 100%;
     max-width: 100%;
+    position: relative;
+}
+
+.course-img {
+    border: 1px solid #d1d7dc;
 }
 
 .course-item h3 {
@@ -82,9 +87,6 @@
 }
 
 @media only screen and (max-width: 1080px) {
-    .course-item {
-        width: 30%;
-    }
     .courses_content_descreption p {
         font-size: 1rem !important;
     }
@@ -96,26 +98,8 @@
     }
 }
 
-@media only screen and (max-width: 800px) {
-    .course-item {
-        width: 45%;
-    }
-}
-
 @media only screen and (max-width: 600px) {
     .course-item {
         margin: 1rem auto;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .course-item {
-        width: auto;
-        height: auto;
-        margin: 1rem auto;
-    }
-    .course-img {
-        height: auto;
-        max-height: 14rem;
     }
 }

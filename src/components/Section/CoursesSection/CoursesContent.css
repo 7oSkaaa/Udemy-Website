@@ -3,8 +3,9 @@
     border-width: 1px;
     border-style: solid;
     border-color: #d1d7dc;
+    max-width: fit-content;
+    position: relative;
     margin: auto;
-    width: auto;
 }
 
 .courses_content_descreption h2 {
@@ -25,6 +26,7 @@
 
 .courses_content_descreption {
     margin-bottom: 3.2rem;
+    position: relative;
 }
 
 .explore {
@@ -56,6 +58,29 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
+}
+
+.react-multi-carousel-track {
+    margin: auto !important;
+}
+
+.react-multi-carousel-item,
+.react-multi-carousel-item--active,
+.react-multi-carousel-track {
+    position: relative !important;
+}
+
+.react-multiple-carousel__arrow {
+    top: 20%;
+}
+
+.react-multiple-carousel__arrow--left {
+    left: 0% !important;
+}
+
+.react-multiple-carousel__arrow--right {
+    right: 0% !important;
 }
 
 @media screen and (max-width: 1400px) {
@@ -88,5 +113,11 @@
     }
     .courses_cards {
         justify-content: center;
+    }
+    .react-multiple-carousel__arrow {
+        width: 2rem !important;
+        min-height: fit-content !important;
+        min-width: fit-content !important;
+        top: 25%;
     }
 }
