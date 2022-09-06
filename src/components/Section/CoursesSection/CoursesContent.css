@@ -32,7 +32,7 @@
     border-style: solid;
     border-width: 1px;
     color: black;
-    height: 4rem;
+    height: 3.5rem;
     position: relative;
     align-items: center;
     display: inline-flex;
@@ -43,7 +43,7 @@
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -.02rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-top: 1.6rem;
 }
 
