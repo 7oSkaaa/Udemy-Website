@@ -124,11 +124,15 @@
 
 @media screen and (max-width: 600px) {
     .react-multiple-carousel__arrow {
-        width: 2rem !important;
+        width: 1.5rem !important;
+        height: 3vh !important;
         min-width: 2vh !important;
         max-height: fit-content;
         top: calc(27% + 1px);
         margin: auto;
+    }
+    .react-multiple-carousel__arrow::before {
+        font-size: 15px !important;
     }
     .courses_cards {
         max-height: fit-content;
