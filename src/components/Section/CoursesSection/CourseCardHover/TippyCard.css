@@ -94,3 +94,21 @@
 .tippy-arrow {
     color: #d1d7dc;
 }
+
+@media screen and (max-width: 500px) {
+    ._cart {
+        width: 14rem;
+        height: 3rem;
+        font-size: 0.9rem;
+    }
+    ._fav {
+        width: 3rem;
+        height: 3rem;
+    }
+    .hoverbuttons {
+        justify-content: space-evenly;
+    }
+    .fav_icon {
+        padding: 0.2rem 0rem 0.2rem 0rem;
+    }
+}

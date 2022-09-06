@@ -111,10 +111,11 @@
 @media only screen and (max-width: 500px) {
     .course-item {
         width: auto;
-        height: 25rem;
-        margin: 0.5rem auto;
+        height: auto;
+        margin: 1rem auto;
     }
     .course-img {
-        height: 15rem;
+        height: auto;
+        max-height: 14rem;
     }
 }
