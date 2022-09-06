@@ -29,5 +29,6 @@
 @media only screen and (max-width: 500px) {
     .courses-tab {
         font-size: 0.8rem;
+        gap: 1rem;
     }
 }
