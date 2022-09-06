@@ -128,5 +128,9 @@
         min-width: 2vh !important;
         max-height: fit-content;
         top: calc(27% + 1px);
+        margin: auto;
+    }
+    .courses_cards {
+        max-height: fit-content;
     }
 }
