@@ -10,18 +10,17 @@ export default function CoursesContent({tab, SearchTerm}) {
     const {header, description, title:category, items:courses} = tab;
     const Filtered_Courses = courses.filter(course => course.title.toLowerCase().includes(SearchTerm.toLowerCase()));
     const Courses_Cards = Filtered_Courses.map((course, idx) => <CourseCard key={idx} course = {course} className/>);
-    const [SlidesNum, set_SlidesNum] = React.useState();
+    const [SlidesNum, set_SlidesNum] = React.useState(1);
 
     React.useLayoutEffect(() => {
-
         function updateSize() {
             const win_width = window.innerWidth;
-            if(win_width >= 1024 && win_width <= 3000)
-                set_SlidesNum(4);
-            else if(win_width >= 464 && win_width < 1024)
+            if(win_width < 500)
+                set_SlidesNum(1);
+            else if(win_width < 800)
                 set_SlidesNum(3);
             else
-                set_SlidesNum(1);
+                set_SlidesNum(4);
         }
         window.addEventListener('resize', updateSize);
         updateSize();
@@ -54,6 +53,8 @@ export default function CoursesContent({tab, SearchTerm}) {
         }
     };    
 
+    while(Courses_Cards.length < SlidesNum) Courses_Cards.push(<></>);
+
     return (
         <div className="courses_content" id="rendered_courses">
             <div className="courses_content_descreption">
@@ -62,7 +63,7 @@ export default function CoursesContent({tab, SearchTerm}) {
                 <a className="explore" href="./index.html">Explore {category}</a>
             </div>
             <div className="courses_cards">
-                <Carousel responsive={responsive} containerClass='container' slidesToSlide={SlidesNum} focusOnSelect={true} rewind={true} rewindWithAnimation={true} partialVisible={false} itemClass='course-item'>
+                <Carousel responsive={responsive} containerClass='container' slidesToSlide={SlidesNum} focusOnSelect={true} rewind={true} rewindWithAnimation={true} partialVisible={false} itemClass='course-item' keyBoardControl={true}>
                     {Courses_Cards}
                 </Carousel>
             </div>
