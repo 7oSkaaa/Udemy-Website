@@ -1,0 +1,121 @@
+.course-item {
+    width: 24%;
+    display: inline-flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.course-item h3 {
+    font-size: 1rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.4rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+.rating {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0rem 0rem;
+    height: auto;
+}
+
+.rating p {
+    font-size: 0.8rem;
+    margin: 0rem 0.2rem;
+}
+
+.rating-score {
+    font-size: 0.9rem !important;
+}
+
+.rating-score,
+.stars {
+    color: orange;
+}
+
+.author {
+    font-size: 0.8rem;
+    color: grey;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0.2rem 0.2rem;
+}
+
+.rating-score {
+    color: #d67c0e;
+    font-weight: 700;
+    margin-right: 0.4rem;
+    font-size: 1.4rem;
+}
+
+.rating-n {
+    margin-left: 0.4rem;
+    font-size: 1.2rem;
+    color: #6a6f73;
+}
+
+.stars {
+    align-items: center;
+    font-size: 1rem;
+}
+
+.price {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0rem 0rem;
+}
+
+.course-img:hover {
+    -webkit-filter: grayscale(30%);
+    filter: grayscale(30%);
+}
+
+@media only screen and (max-width: 1080px) {
+    .course-item {
+        width: 30%;
+    }
+    .courses_content_descreption p {
+        font-size: 1rem !important;
+    }
+    .courses_content_descreption h2 {
+        font-size: 1.5rem !important;
+    }
+    .explore {
+        font-size: 1rem !important;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .course-item {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .course-item {
+        margin: 1rem auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .course-item {
+        width: auto;
+        height: auto;
+        margin: 1rem auto;
+    }
+    .course-img {
+        height: auto;
+        max-height: 14rem;
+    }
+}
