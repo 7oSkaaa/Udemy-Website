@@ -8,6 +8,14 @@
     flex-direction: column;
 }
 
+.seller_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 1rem;
+}
+
 .grey_p {
     color: rgb(100, 100, 100);
     font-size: 0.72rem;
@@ -89,6 +97,7 @@
 
 .last_update {
     color: #12663d;
+    margin: 0rem;
 }
 
 .tippy-arrow {

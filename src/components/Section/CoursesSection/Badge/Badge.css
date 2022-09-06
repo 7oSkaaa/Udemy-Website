@@ -1,0 +1,12 @@
+._badge {
+    background: #eceb98;
+    color: #3d3c0a;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border: 0px solid #3d3c0a;
+    padding: .2rem .4rem;
+    letter-spacing: -.02rem;
+    max-width: fit-content;
+    max-height: fit-content;
+    margin: 0.5rem 0rem 0rem 0.2rem;
+}

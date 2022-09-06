@@ -2,6 +2,7 @@ import React from 'react';
 import Stars from './Stars';
 import PopupCard from '../PopupCard/PopupCard';
 import Tippy from '@tippyjs/react';
+import Badge from '../Badge';
 import 'tippy.js/dist/tippy.css';
 import '../PopupCard/TippyCard.css';
 import './CourseCard.css';
@@ -10,6 +11,7 @@ export default function CourseCard({course}){
 
     const instructors = course.visible_instructors.map(instructor => instructor.title).join(', ');
     const price = parseInt(course.num_published_lectures * course.avg_rating_recent);
+    const Badges = course.badges.map((badge, idx) => <Badge key={idx} badge_text={badge.badge_text}/>);
 
     return (
         <Tippy content={<PopupCard course={course}/>} interactive={true} interactiveBorder={30} arrow={true} className="tippy_card">
@@ -23,6 +25,7 @@ export default function CourseCard({course}){
                     <p className="rating-n">({course.num_reviews.toLocaleString('en-US')})</p>
                 </div>
                 <p className="price">E£{price.toLocaleString('en-US')}</p>
+                {Badges}
             </div>
         </Tippy>
     );
