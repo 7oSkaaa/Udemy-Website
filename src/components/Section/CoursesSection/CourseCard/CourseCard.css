@@ -101,5 +101,10 @@
 @media only screen and (max-width: 600px) {
     .course-item {
         margin: auto 0rem;
+        max-height: fit-content;
+    }
+    .course-img {
+        max-height: fit-content;
+        height: 12rem;
     }
 }
