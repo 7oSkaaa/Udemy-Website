@@ -17,7 +17,8 @@ export default function SearchBar({setSearchTerm, SearchTerm}) {
     }
 
     const keyboardPress = (event) => {
-        if (event.key === 'Enter') onSearch(event.target.value);
+        if (event.key === 'Enter') 
+            onSearch(event.target.value);
     }
 
     return (

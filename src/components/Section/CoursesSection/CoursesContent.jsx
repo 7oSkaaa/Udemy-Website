@@ -3,8 +3,9 @@ import './CoursesContent.css';
 import './CourseCard.css';
 import CourseCard from './CourseCard.jsx';
 
-export default function CoursesContent({header, description, category, courses, SearchTerm}) {
-
+export default function CoursesContent({tab, SearchTerm}) {
+    
+    const {header, description, title:category, items:courses} = tab;
     const Filtered_Courses = courses.filter(course => course.title.toLowerCase().includes(SearchTerm.toLowerCase()));
     const Courses_Cards = Filtered_Courses.map((course, idx) => <CourseCard key={idx} course = {course}/>);
 
