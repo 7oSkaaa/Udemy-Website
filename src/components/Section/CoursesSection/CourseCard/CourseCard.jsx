@@ -21,7 +21,7 @@ export default function CourseCard({course}){
     );
     
     return (
-        <OverlayTrigger delay={{ show: 250, hide: 250 }} className='tippycard' overlay={popover} placement='auto' trigger={['hover', 'focus']}>
+        <OverlayTrigger delay={{ show: 250, hide: 250 }} className='tippycard' overlay={popover} placement='top-end' trigger={['hover', 'focus']} interactive={true}>
             <div className="course-item">
                 <img className="course-img" src={course.image_750x422} alt="course"/>
                 <h3>{course.title}</h3>
