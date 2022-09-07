@@ -1,0 +1,16 @@
+{
+    "ScreenDimensions": {
+        "Mobile": {
+            "maxWidth": 464,
+            "minWidth": 0
+        },
+        "Tablet": {
+            "maxWidth": 1024,
+            "minWidth": 464
+        },
+        "Desktop": {
+            "maxWidth": 3000,
+            "minWidth": 1024
+        }
+    }
+}

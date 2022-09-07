@@ -4,6 +4,7 @@ import CourseCard from './CourseCard';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './PopupCard/TippyCard.css';
+import data from '../../ScreenDimensions/ScreenDimensions.json';
 
 export default function CoursesContent({tab, SearchTerm}) {
     
@@ -11,6 +12,7 @@ export default function CoursesContent({tab, SearchTerm}) {
     const Filtered_Courses = courses.filter(course => course.title.toLowerCase().includes(SearchTerm.toLowerCase()));
     const Courses_Cards = Filtered_Courses.map((course, idx) => <CourseCard key={idx} course = {course} className/>);
     const [SlidesNum, set_SlidesNum] = React.useState(1);
+    const {Mobile, Tablet, Desktop} = data.ScreenDimensions;
 
     function CompleteCourses(){
         while(Courses_Cards.length < SlidesNum) 
@@ -20,38 +22,38 @@ export default function CoursesContent({tab, SearchTerm}) {
     React.useLayoutEffect(() => {
         function updateSize() {
             const win_width = window.innerWidth;
-            if(win_width < 500)
+            if(win_width < Mobile.maxWidth)
                 set_SlidesNum(1);
-            else if(win_width < 800)
+            else if(win_width < Tablet.maxWidth)
                 set_SlidesNum(3);
             else
                 set_SlidesNum(4);
         }
         window.addEventListener('resize', updateSize);
         updateSize();
-    }, []);
+    }, [Mobile, Tablet, Desktop]);
 
     const responsive = {
         desktop: {
             breakpoint: {
-                max: 3000,
-                min: 1024
+                max: Desktop.maxWidth,
+                min: Desktop.minWidth
             },
             items: 4,
             partialVisibilityGutter: 40
         },
         mobile: {
             breakpoint: {
-                max: 464,
-                min: 0
+                max: Mobile.maxWidth,
+                min: Mobile.minWidth
             },
             items: 1,
             partialVisibilityGutter: 30
         },
         tablet: {
             breakpoint: {
-                max: 1024,
-                min: 464
+                max: Tablet.maxWidth,
+                min: Tablet.minWidth
             },
             items: 3,
             partialVisibilityGutter: 30
