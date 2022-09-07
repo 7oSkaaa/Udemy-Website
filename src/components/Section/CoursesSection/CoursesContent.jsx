@@ -19,11 +19,6 @@ export default function CoursesContent({tab, SearchTerm}) {
             Courses_Cards.push(<></>);
     }
 
-    function CompleteCourses(){
-        while(Courses_Cards.length < SlidesNum) 
-            Courses_Cards.push(<></>);
-    }
-
     React.useLayoutEffect(() => {
         function updateSize() {
             const win_width = window.innerWidth;
