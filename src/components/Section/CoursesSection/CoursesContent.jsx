@@ -12,6 +12,11 @@ export default function CoursesContent({tab, SearchTerm}) {
     const Courses_Cards = Filtered_Courses.map((course, idx) => <CourseCard key={idx} course = {course} className/>);
     const [SlidesNum, set_SlidesNum] = React.useState(1);
 
+    function CompleteCourses(){
+        while(Courses_Cards.length < SlidesNum) 
+            Courses_Cards.push(<></>);
+    }
+
     React.useLayoutEffect(() => {
         function updateSize() {
             const win_width = window.innerWidth;
@@ -53,8 +58,8 @@ export default function CoursesContent({tab, SearchTerm}) {
         }
     };    
 
-    while(Courses_Cards.length < SlidesNum) Courses_Cards.push(<></>);
-
+    CompleteCourses();
+    
     return (
         <div className="courses_content" id="rendered_courses">
             <div className="courses_content_descreption">
