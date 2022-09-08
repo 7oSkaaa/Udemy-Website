@@ -1,22 +1,10 @@
 import React from 'react';
 import './App.css';
-import NavBar from './components/NavBar';
-import Section from './components/Section';
-import Categories from './components/Categories';
-import Footer from './components/Footer';
+import HomePage from './components/HomePage';
 
-function App() {
+export default function App() {
     
-    const [SearchTerm, setSearchTerm] = React.useState('');
-
     return (
-        <div>
-            <NavBar SearchTerm={SearchTerm} setSearchTerm={setSearchTerm}/>
-            <Section SearchTerm={SearchTerm}/>
-            <Categories/>
-            <Footer/>
-        </div>
-    );
+        <HomePage />
+    )
 }
-
-export default App;

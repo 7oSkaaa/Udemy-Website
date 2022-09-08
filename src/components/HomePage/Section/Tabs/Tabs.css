@@ -4,8 +4,9 @@
     flex-wrap: wrap;
     flex-grow: 1;
     gap: 2rem;
-    margin: 1rem;
+    margin: 1rem auto;
     font-size: 1rem;
+    width: 85rem;
 }
 
 .courses-tab label {
