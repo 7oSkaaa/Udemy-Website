@@ -9,29 +9,32 @@ const MaxShownComments = 3;
 
 function Review({review}){
     return (
-        <div className="user-review">
-            <div className="initials-col d-none d-md-block">
-                <div className="initials">
-                    <span>{review.user.initials}</span>
+        <div className="review_card">
+            <div className="user-review">
+                <div className="initials-col d-none d-md-block">
+                    <div className="initials">
+                        <span>{review.user.initials}</span>
+                    </div>
+                </div>
+                <div>
+                    <h5 className="user-name">{review.user.public_display_name}</h5>
+                    <div className="user-stars">
+                        <Stars rating={review.rating} />
+                    </div>
+                    <p className="user-comment">{review.content}</p>
+                    <p className="was-review-helpful">Was this review helpful?</p>
+                    <div className='react-buttons'>
+                    <button className="thumbs-btn">
+                        <HiOutlineThumbUp/>
+                    </button>
+                    <button className="thumbs-btn">
+                        <HiOutlineThumbDown style={{transform: "scale(-1, 1)"}} />
+                    </button>
+                    <a href="/#" className="report-user">Report</a>
+                    </div>
                 </div>
             </div>
-            <div>
-                <h5 className="user-name">{review.user.public_display_name}</h5>
-                <div className="user-stars">
-                    <Stars rating={review.rating} />
-                </div>
-                <p className="user-comment">{review.content}</p>
-                <p className="was-review-helpful">Was this review helpful?</p>
-                <div className='react-buttons'>
-                <button className="thumbs-btn">
-                    <HiOutlineThumbUp/>
-                </button>
-                <button className="thumbs-btn">
-                    <HiOutlineThumbDown style={{transform: "scale(-1, 1)"}} />
-                </button>
-                <a href="/#" className="report-user">Report</a>
-                </div>
-            </div>
+        <hr/>
         </div>
     )
 }
@@ -43,7 +46,7 @@ export default function Reviews({courseData}) {
 
     return (
         <div className="review_section">
-            { reviewsData.map((item, idx) => ((show_more || idx < MaxShownComments) ? <Review key={idx} review={item} /> : <></> )) }
+            { reviewsData.map((item, idx) => ((show_more || idx < MaxShownComments) ? <Review key={idx} review={item} /> : <div key={idx}></div> )) }
             <div className="show-more-less-btn" onClick={() => set_show_more(!show_more)}>
                 {
                     show_more ? 
