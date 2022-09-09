@@ -15,8 +15,8 @@ export default function CourseCover({courseData}) {
         <div className="course-cover">
             <div className='cover-items'>
                 <Breadcrumb className="breadcrumb _path">
-                    <Breadcrumb.Item linkAs={Link} linkProps={{to: "/"}}>Home</Breadcrumb.Item>
-                    <Breadcrumb.Item linkAs={HashLink} linkProps={{to: "/#rendered_courses"}}>Courses</Breadcrumb.Item>
+                    <Breadcrumb.Item linkAs={Link} linkProps={{to: "/udemy-home-page-React/"}}>Home</Breadcrumb.Item>
+                    <Breadcrumb.Item linkAs={HashLink} linkProps={{to: "/udemy-home-page-React/#rendered_courses"}}>Courses</Breadcrumb.Item>
                     <Breadcrumb.Item active>{courseData.context_info.label.display_name}</Breadcrumb.Item>
                 </Breadcrumb>
                 <img className='cover_image hidden_items' src={courseData.image_750x422} alt="Course img"/>
