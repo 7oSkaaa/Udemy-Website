@@ -51,7 +51,7 @@ export default function CourseCover({courseData}) {
                                 null
                         }
                     </div>
-                    <h2 className="price-cover">E£{price}</h2>
+                    <h2 className="price-cover hidden_items">E£{price}</h2>
                     <button className="add-to-cart-cover hidden_items">Add to cart</button>
                     <div className="money-back-cover hidden_items">30-Day Money-Back Guarantee</div>
                     <div className="share-gift-apply-cover hidden_items">

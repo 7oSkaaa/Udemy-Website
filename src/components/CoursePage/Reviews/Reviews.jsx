@@ -45,7 +45,7 @@ export default function Reviews({courseData}) {
     const reviewsData = courseData.users_reviews;
 
     return (
-        <div className="review_section">
+        <div className="review_section" id="Reviews">
             { reviewsData.map((item, idx) => ((show_more || idx < MaxShownComments) ? <Review key={idx} review={item} /> : <div key={idx}></div> )) }
             <div className="show-more-less-btn" onClick={() => set_show_more(!show_more)}>
                 {

@@ -40,7 +40,7 @@ export default function Instructions({courseData}) {
     const InstructorsList = InstructorsData.map((instructor, idx) => (<InstructorCard key={idx} instructor={instructor} />));
 
     return (
-        <div className="instructors_section">
+        <div className="instructors_section" id="Instructor">
             <div className="instructor">
                 <h4>Instructors</h4>
                 {InstructorsList}

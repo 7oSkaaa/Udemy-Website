@@ -1,0 +1,75 @@
+.nav-tabs-section {
+    width: 100%;
+    margin: auto;
+    border: 1px solid #e5e5e5;
+}
+
+.courses-tab label {
+    font-weight: bold;
+    color: grey;
+    cursor: pointer;
+}
+
+.courses-tab {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 5rem;
+}
+
+.courses-tab>.courses_tab_bar {
+    width: 70%;
+    margin: auto;
+}
+
+.courses-tab>input[type="radio"] {
+    display: none;
+}
+
+.courses-tab>input[type="radio"]:checked+label {
+    color: black;
+}
+
+.courses-tab>input[type="radio"]:hover+label {
+    color: black;
+}
+
+.course_page_tab_link {
+    color: #c8bbf5;
+    font-weight: bold;
+    font-size: 1.1rem;
+    width: 10%;
+}
+
+@media only screen and (max-width: 1080px) {
+    .courses_tab_bar {
+        width: 90%;
+    }
+    .course_page_tab_link {
+        width: 15%;
+    }
+    .courses-tab {
+        padding: 0rem;
+        margin: 1rem auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .course_page_tab_link {
+        font-size: 0.8rem;
+    }
+    .courses-tab {
+        width: fit-content;
+        gap: 2rem;
+        padding-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .courses-tab {
+        gap: 2rem;
+    }
+    .courses-tab label {
+        font-size: 0.7rem;
+    }
+}

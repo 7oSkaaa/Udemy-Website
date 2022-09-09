@@ -10,6 +10,7 @@ import Instructor from './Instructor';
 import StudentFeedback from './StudentFeedback';
 import Reviews from './Reviews';
 import Loader from '../HomePage/Loader';
+import NavTabs from './NavTabs';
 import { CoursesContext } from "../CoursesContext";
 
 function CourseCardPage({data}) {
@@ -17,6 +18,7 @@ function CourseCardPage({data}) {
     return (
         <>
             <CourseCover courseData={data}/>
+            <NavTabs/>
             <WhatYouLearn courseData={data}/>
             <CourseCardSticky courseData={data}/>
             <CourseContent courseData={data}/>

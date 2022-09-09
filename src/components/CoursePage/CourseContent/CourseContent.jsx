@@ -54,7 +54,7 @@ export default function CourseContent({courseData}) {
     const sectionsData = courseData.curriculum_context.data.sections;
 
     return (
-        <div className="course-content">
+        <div className="course-content" id="Curriculum">
             <p className='courses-content-header'>Course content</p>
             <div className="details">
                 <p>{Object.keys(sectionsData).length} sections | {courseData.num_published_lectures} lectures | {courseData.content_info}</p>
