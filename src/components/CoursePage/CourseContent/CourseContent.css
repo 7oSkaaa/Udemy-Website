@@ -90,4 +90,12 @@
     .section-header-title {
         font-size: 0.8rem;
     }
+    .section-header {
+        display: flex;
+        flex-flow: column;
+    }
+    .section-header-info {
+        font-size: 0.8rem;
+        margin: 0rem 2rem;
+    }
 }

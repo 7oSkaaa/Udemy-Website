@@ -9,6 +9,7 @@ import './CourseCover.css'
 export default function CourseCover({courseData}) {
 
     const instructors = courseData.visible_instructors.map((instructor, idx) => <a key={idx} href='/#' className='instructors_name'>{instructor.display_name}</a>);
+    const price = parseInt(courseData.avg_rating * courseData.num_published_lectures);
 
     return (
         <div className="course-cover">
@@ -18,6 +19,7 @@ export default function CourseCover({courseData}) {
                     <Breadcrumb.Item linkAs={HashLink} linkProps={{to: "/#rendered_courses"}}>Courses</Breadcrumb.Item>
                     <Breadcrumb.Item active>{courseData.context_info.label.display_name}</Breadcrumb.Item>
                 </Breadcrumb>
+                <img className='cover_image hidden_items' src={courseData.image_750x422} alt="Course img"/>
                 <h3>{courseData.title}</h3>
                 <p className='headline'>{courseData.headline}</p>
                 <div className='_rating'>
@@ -48,6 +50,14 @@ export default function CourseCover({courseData}) {
                             :   
                                 null
                         }
+                    </div>
+                    <h2 className="price-cover">E£{price}</h2>
+                    <button className="add-to-cart-cover hidden_items">Add to cart</button>
+                    <div className="money-back-cover hidden_items">30-Day Money-Back Guarantee</div>
+                    <div className="share-gift-apply-cover hidden_items">
+                        <a href='\#' className='links-cover hidden_items'>Share</a>
+                        <a href='\#' className='links-cover hidden_items'>Gift this course</a>
+                        <a href='\#' className='links-cover hidden_items'>Apply Coupon</a>
                     </div>
             </div>
         </div>

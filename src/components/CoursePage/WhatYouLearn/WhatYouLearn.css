@@ -40,3 +40,10 @@
         margin: auto;
     }
 }
+
+@media only screen and (max-width: 500px) {
+    .what-to-learn-list-flex {
+        display: flex;
+        flex-direction: column;
+    }
+}
