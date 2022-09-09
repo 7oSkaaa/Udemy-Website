@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import CoursesContent from './CoursesSection/CoursesContent';
 import HeaderSection from "./Header/HeaderSection";
 import { CoursesContext } from "../../CoursesContext";
@@ -8,8 +8,8 @@ import './Section.css';
 
 export default function Section({SearchTerm}) {
     
-    const [curr_tab, set_curr_tab] = React.useState('python_res');
-    const { coursesList } = React.useContext(CoursesContext);
+    const [curr_tab, set_curr_tab] = useState('python_res');
+    const { coursesList } = useContext(CoursesContext);
 
     return (
         <div>

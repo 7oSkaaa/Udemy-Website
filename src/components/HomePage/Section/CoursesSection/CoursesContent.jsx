@@ -5,6 +5,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './PopupCard/TippyCard.css';
 import data from '../../ScreenDimensions/ScreenDimensions.json';
+import { CgSmileNone } from "react-icons/cg"; 
 
 export default function CoursesContent({tab, SearchTerm}) {
     
@@ -62,6 +63,8 @@ export default function CoursesContent({tab, SearchTerm}) {
 
     CompleteCourses();
     
+    console.log(Filtered_Courses);
+
     return (
         <div className="courses_content" id="rendered_courses">
             <div className="courses_content_descreption">
@@ -70,9 +73,17 @@ export default function CoursesContent({tab, SearchTerm}) {
                 <a className="explore" href="./index.html">Explore {category}</a>
             </div>
             <div className="courses_cards">
-                <Carousel responsive={responsive} containerClass='container' slidesToSlide={SlidesNum} focusOnSelect={true} rewind={true} rewindWithAnimation={true} partialVisible={false} itemClass='course-item' keyBoardControl={true}>
-                    {Courses_Cards}
-                </Carousel>
+                {
+                    Filtered_Courses.length ?
+                        <Carousel responsive={responsive} containerClass='container' slidesToSlide={SlidesNum} focusOnSelect={true} rewind={true} rewindWithAnimation={true} partialVisible={false} itemClass='course-item' keyBoardControl={true}>
+                            {Courses_Cards}
+                        </Carousel> 
+                    :
+                        <div className='No_Data_Preview'>
+                            <CgSmileNone/>
+                            <p className='No_preview_p'>No Courses to preview</p>
+                        </div>
+                }
             </div>
         </div>
     );
