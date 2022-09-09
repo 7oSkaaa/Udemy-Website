@@ -7,15 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 export default function Categories() {
 
-    return (
-        <CoursesContext.Consumer>
-            {
-                ({topCategories}) => 
-                (
-                    topCategories ? <CategoriesSections categoryList={topCategories} className='categories_sections'/> : <Loader/>
-                ) 
-            }
-        </CoursesContext.Consumer>
-    )
+    const { topCategories } = React.useContext(CoursesContext);
 
+    return topCategories ? <CategoriesSections categoryList={topCategories} className='categories_sections'/> : <Loader/>;
 }

@@ -10,7 +10,7 @@ export const CoursesProvider = (props) => {
     const [coursesList, setCoursesList] = useState();
     const [topCategories, setTopCategories] = useState();
 
-    useEffect(()=>{
+    useEffect(() => {
 
         fetch("https://api.npoint.io/97d7e0d71e507947a59f")
             .then((res) => res.json())
@@ -56,13 +56,13 @@ export const CoursesProvider = (props) => {
             return null;
         }
     }
-
+    
     const coursesContext = {
         coursesDb,
         coursesList,
         topCategories,
         queryCourse
     };
-
+    
     return <CoursesContext.Provider value={coursesContext}>{children}</CoursesContext.Provider>;
 }

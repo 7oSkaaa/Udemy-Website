@@ -32,15 +32,8 @@ function CourseCardPage({data}) {
 export default function CoursePage(){
 
     const { courseId } = useParams();
+    const { queryCourse } = React.useContext(CoursesContext);
+    const courseData = queryCourse(courseId);
     
-    return (
-        <CoursesContext.Consumer>
-            {({queryCourse}) => {
-                const courseData = queryCourse(courseId);
-                console.log(queryCourse(courseId));
-                console.log(courseData);
-                return courseData ? <CourseCardPage data={courseData}/> : <Loader/> 
-            }}
-        </CoursesContext.Consumer>
-    )
+    return courseData ? <CourseCardPage data={courseData}/> : <Loader/> 
 }

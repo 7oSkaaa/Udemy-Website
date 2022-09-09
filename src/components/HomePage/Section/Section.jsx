@@ -9,14 +9,13 @@ import './Section.css';
 export default function Section({SearchTerm}) {
     
     const [curr_tab, set_curr_tab] = React.useState('python_res');
+    const { coursesList } = React.useContext(CoursesContext);
 
     return (
         <div>
             <HeaderSection/> 
             <Tabs curr_tab={curr_tab} set_curr_tab={set_curr_tab}/>
-            <CoursesContext.Consumer>
-                { ({coursesList}) => (coursesList ?  <CoursesContent tab={coursesList[curr_tab]} SearchTerm={SearchTerm}/> : <Loader/>) }
-            </CoursesContext.Consumer>
+            {coursesList ?  <CoursesContent tab={coursesList[curr_tab]} SearchTerm={SearchTerm}/> : <Loader/>}
         </div>
     );
 }
