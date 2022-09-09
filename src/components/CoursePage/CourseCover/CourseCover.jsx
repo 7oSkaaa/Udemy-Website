@@ -1,6 +1,8 @@
 import React from 'react'
 import Stars from '../../HomePage/Section/CoursesSection/CourseCard/Stars'
 import { MdNewReleases, MdLanguage, MdClosedCaption } from 'react-icons/md'
+import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import { Breadcrumb } from "react-bootstrap"
 import './CourseCover.css'
 
@@ -12,8 +14,8 @@ export default function CourseCover({courseData}) {
         <div className="course-cover">
             <div className='cover-items'>
                 <Breadcrumb className="breadcrumb _path">
-                    <Breadcrumb.Item>Home</Breadcrumb.Item>
-                    <Breadcrumb.Item>Courses</Breadcrumb.Item>
+                    <Breadcrumb.Item linkAs={Link} linkProps={{to: "/"}}>Home</Breadcrumb.Item>
+                    <Breadcrumb.Item linkAs={HashLink} linkProps={{to: "/#rendered_courses"}}>Courses</Breadcrumb.Item>
                     <Breadcrumb.Item active>{courseData.context_info.label.display_name}</Breadcrumb.Item>
                 </Breadcrumb>
                 <h3>{courseData.title}</h3>

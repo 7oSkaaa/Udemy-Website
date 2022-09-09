@@ -23,11 +23,11 @@ export default function SearchBar({setSearchTerm, SearchTerm}) {
 
     return (
 
-        <li className="search-container disappear-item">
-            <div className="_form" onKeyDown={keyboardPress}>
-                <button className="search-icon" onClick={() => onSearch(value)}><span className="material-symbols-outlined">search</span></button>
-                <input className="search-bar _nav-item menu-item" type="text" placeholder="Search for anything" name="search" value={value || ''} onChange={onChange} required/>
+        <div className='search-container disappear-item'>
+            <div className='_form' onKeyDown={keyboardPress}>
+                <button className='search-icon' onClick={() => onSearch(value)}><span className='material-symbols-outlined'>search</span></button>
+                <input className='search-bar _nav-item menu-item' type='text' placeholder='Search for anything' name='search' value={value || ''} onChange={onChange} required/>
             </div>
-        </li>
+        </div>
     )
 }
