@@ -1,0 +1,133 @@
+.side-bar-container {
+    width: 18%;
+    border: 1px solid whitesmoke;
+    position: absolute;
+    top: 120px;
+    left: 70%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.child {
+    border: 1px solid whitesmoke;
+    z-index: 5000;
+    background-color: white;
+    padding: 1rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.photo {
+    width: 100%;
+}
+
+.price {
+    font-weight: bolder;
+    font-size: 2.5rem;
+    padding: 1rem 0rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.add-to-cart {
+    width: 100%;
+    background-color: #a435f0;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    height: 6vh;
+    margin: 0.5rem auto;
+}
+
+.buy {
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    height: 6vh;
+    margin: 0.5rem auto;
+}
+
+.sidebar_buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.money-back {
+    font-size: 12px;
+    text-align: center;
+    margin: 1rem 0rem;
+}
+
+.include {
+    padding: 1rem;
+}
+
+h6 {
+    font-weight: bold;
+}
+
+.lineDesc {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.lineDesc p {
+    font-size: 0.8rem;
+}
+
+.share-gift-apply {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.links:hover {
+    color: black;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    width: fit-content;
+    color: black;
+}
+
+.train {
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+
+.get {
+    font-size: 0.9rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.try {
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: white;
+    font-weight: bold;
+    height: 6vh;
+}
+
+.buy:hover,
+.try:hover {
+    background-color: whitesmoke;
+}
+
+.add-to-cart:hover {
+    background-color: #6b1ba0;
+}

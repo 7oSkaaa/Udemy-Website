@@ -1,0 +1,92 @@
+.course-cover {
+    color: white;
+    background-color: #1c1d1f;
+}
+
+.review_number:hover {
+    color: #c8bbf5;
+}
+
+.cover-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    margin: auto;
+    padding: 2rem 0rem;
+}
+
+.cover-items h3 {
+    font-weight: bold;
+    max-width: 70%;
+    font-size: 2rem;
+}
+
+.breadcrumb a {
+    color: #c8bbf5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.headline {
+    font-size: 1.2rem;
+    margin: 1rem 0rem;
+    max-width: 70%;
+}
+
+._rating {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0rem;
+    gap: 0.5rem;
+    align-items: baseline;
+}
+
+.rate_number {
+    font-weight: bold;
+    color: orange;
+}
+
+.review_number {
+    color: #c8bbf5;
+    font-size: 0.8rem;
+}
+
+.subscribers_numbers {
+    font-size: 0.9rem;
+    font-weight: 100;
+}
+
+.instructors {
+    display: flex;
+    gap: 1rem;
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+.instructors_name {
+    color: #c8bbf5;
+}
+
+.additional_info {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin: 1rem 0rem;
+    font-size: 1rem;
+}
+
+.language,
+.caption,
+.last_update_date {
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+}
+
+.language svg,
+.caption svg,
+.last_update_date svg {
+    font-size: 1.2rem;
+}

@@ -1,0 +1,29 @@
+.description-section {
+    width: 60%;
+    margin: 2rem auto;
+}
+
+.description h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.description {
+    width: 70%;
+    line-height: 1.25
+}
+
+.description-html_show_more {
+    overflow: hidden;
+    height: 200px;
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
+.show-more-less-desc-btn {
+    color: #614fed;
+    font-weight: bold;
+}
+
+.show-more-less-desc-btn:hover {
+    cursor: pointer;
+}

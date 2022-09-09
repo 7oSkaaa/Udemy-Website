@@ -1,0 +1,76 @@
+.review_section {
+    width: 60%;
+    margin: 2rem auto;
+}
+
+.user-review {
+    width: 70%;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1.5rem;
+}
+
+.initials {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    position: relative;
+}
+
+.initials span {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.user-stars svg {
+    font-size: 1.2rem;
+}
+
+.user-comment,
+.was-review-helpful {
+    margin: 1rem 0rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.thumbs-btn {
+    border-radius: 50%;
+    width: fit-content;
+    padding: 0.5rem;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.thumbs-btn svg {
+    font-size: 1.5rem;
+}
+
+.report-user,
+.report-user:hover {
+    color: black;
+}
+
+.react-buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+    margin: 1rem 0rem;
+    align-items: baseline;
+}
+
+.show-more-less-btn {
+    width: 70%;
+    border: solid 1px black;
+    padding: 10px;
+    margin: 10px 0px;
+    text-align: center;
+    font-weight: bold;
+}

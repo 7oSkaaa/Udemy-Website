@@ -1,0 +1,32 @@
+.Objectives-card {
+    width: 60%;
+    margin: 2rem auto;
+}
+
+.what-you-learn {
+    width: 70%;
+    border: 1px solid #e6e6e6;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.what-you-learn h4 {
+    font-weight: bold;
+}
+
+.what-to-learn-list-flex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+.learn_target {
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+    align-items: center;
+    font-size: 0.9rem;
+    align-items: baseline;
+}
