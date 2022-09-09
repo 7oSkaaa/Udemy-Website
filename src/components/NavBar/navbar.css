@@ -1,0 +1,235 @@
+ul {
+    margin: 0;
+    list-style-type: none;
+    flex-grow: 1;
+}
+
+._navbar {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    padding: 0% 0.8%;
+    list-style-type: none;
+    height: 5rem;
+    font-family: 'Anek Bangla', sans-serif;
+    font-size: 0.85rem;
+    position: relative;
+    z-index: 999;
+}
+
+.logo {
+    width: 5rem;
+}
+
+._nav-items {
+    margin: 0.5rem;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+._form {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: none;
+}
+
+input {
+    padding: 0;
+    font-size: 0.9em;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+._navbar label,
+.shopping-cart {
+    color: black;
+    text-decoration: none;
+}
+
+._navbar label:hover,
+.shopping-cart:hover {
+    color: purple;
+    text-decoration: none;
+}
+
+._navbar label {
+    width: auto;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-weight: 500;
+}
+
+.search-container {
+    flex-grow: 1;
+    width: auto;
+    border-radius: 15rem;
+    border: black 1px solid;
+    position: relative;
+    background-color: whitesmoke;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 1rem;
+    height: 3rem;
+}
+
+.search-icon,
+.search-bar {
+    border: none;
+    position: relative;
+    float: left;
+    background: none;
+}
+
+.search-icon {
+    color: grey;
+    margin: 0.25rem 0.5rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.search-icon:hover {
+    color: purple;
+}
+
+._navbar-category {
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+}
+
+.nav-buttons {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 50%;
+}
+
+.nav-buttons button {
+    border: 1px solid black;
+    margin-left: 10px;
+    width: 80px;
+    outline: none;
+}
+
+#_reg {
+    background: black;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+#_log {
+    font-weight: bold;
+    font-size: 0.8rem;
+    background: white;
+}
+
+#_language {
+    width: 3rem;
+    background: none;
+    font-weight: bold;
+}
+
+#_log:hover,
+#_language:hover {
+    background: whitesmoke;
+}
+
+[class^="_navbar__"]:not(:last-child) {
+    margin: 0 10px;
+}
+
+._navbar>nav {
+    padding: 0 2.4rem;
+    position: relative;
+}
+
+.menu {
+    display: none;
+}
+
+#teach-udemy,
+#udemy-bus {
+    width: 9rem;
+}
+
+.material-symbols-outlined {
+    line-height: 1.4 !important;
+}
+
+@media only screen and (max-width: 800px) {
+    .disappear-item,
+    ._navbar-category {
+        display: none;
+    }
+    .menu {
+        color: black;
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+        display: initial;
+    }
+    .menu:hover {
+        color: purple;
+    }
+    ._navbar {
+        height: 4rem;
+        padding: 0rem 0.5rem;
+    }
+    ._nav-items {
+        padding: 0rem 0rem;
+    }
+    #teach-udemy,
+    #udemy-bus,
+    .search-bar {
+        flex-grow: 1;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    #teach-udemy {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .search-bar {
+        flex-grow: 1;
+    }
+    .search-container {
+        width: auto;
+    }
+    #udemy-bus {
+        display: none;
+    }
+    ._navbar {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .search-bar {
+        flex-grow: 1;
+    }
+    .search-container {
+        width: auto;
+    }
+    ._navbar {
+        width: 100%;
+    }
+}
