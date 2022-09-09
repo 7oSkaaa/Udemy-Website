@@ -3,10 +3,10 @@ import NavItems from './NavItems';
 import NavButtons from './NavButtons';
 import './navbar.css';
 
-export default function NavBar ({setSearchTerm, SearchTerm}){
+export default function NavBar ({setSearchWord}){
     return (
         <nav className="_navbar">
-            <NavItems setSearchTerm={setSearchTerm} SearchTerm={SearchTerm}/>
+            <NavItems setSearchWord={setSearchWord}/>
             <NavButtons />
         </nav>
     )

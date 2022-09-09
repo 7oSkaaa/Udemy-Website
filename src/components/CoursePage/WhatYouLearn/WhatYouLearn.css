@@ -30,3 +30,13 @@
     font-size: 0.9rem;
     align-items: baseline;
 }
+
+@media only screen and (max-width: 1080px) {
+    .Objectives-card {
+        width: 100%;
+    }
+    .what-you-learn {
+        width: 90%;
+        margin: auto;
+    }
+}

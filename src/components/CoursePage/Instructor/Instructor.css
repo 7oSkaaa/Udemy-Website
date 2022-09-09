@@ -49,3 +49,16 @@
     font-size: 0.9rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+@media only screen and (max-width: 1080px) {
+    .instructors_section {
+        width: 100%;
+    }
+    .instructor {
+        width: 90%;
+        margin: auto;
+    }
+    .instructor-card p {
+        font-size: 0.9rem;
+    }
+}

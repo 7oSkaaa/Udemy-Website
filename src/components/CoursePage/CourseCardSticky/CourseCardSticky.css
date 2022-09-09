@@ -131,3 +131,9 @@ h6 {
 .add-to-cart:hover {
     background-color: #6b1ba0;
 }
+
+@media only screen and (max-width: 1080px) {
+    .side-bar-container {
+        display: none;
+    }
+}

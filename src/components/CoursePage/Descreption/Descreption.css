@@ -27,3 +27,13 @@
 .show-more-less-desc-btn:hover {
     cursor: pointer;
 }
+
+@media only screen and (max-width: 1080px) {
+    .description-section {
+        width: 100%;
+    }
+    .description {
+        width: 90%;
+        margin: auto;
+    }
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import HomePage from './components/HomePage';
 import { Routes, Route } from 'react-router-dom';
@@ -9,13 +9,13 @@ import { CoursesProvider } from './components/CoursesContext';
 
 export default function App() {
     
-    const [SearchTerm, setSearchTerm] = React.useState('');
-
+    const [searchWord, setSearchWord] = useState('');
+    
     return (
         <CoursesProvider>
-            <NavBar SearchTerm={SearchTerm} setSearchTerm={setSearchTerm}/>
+            <NavBar setSearchWord={setSearchWord}/>
             <Routes>
-                <Route path="/" element={<HomePage SearchTerm={SearchTerm}/>} />
+                <Route path="/" element={<HomePage SearchTerm={searchWord}/>} />
                 <Route path="/course_info/:courseId" element={<CoursePage/>} />
             </Routes>
             <Footer/>

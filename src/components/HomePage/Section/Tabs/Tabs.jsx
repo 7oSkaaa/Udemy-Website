@@ -9,7 +9,7 @@ export default function Tabs({curr_tab, set_curr_tab}) {
     }
 
     return (
-        <div className="courses-categories">
+        <div className="courses-categories" id="courses_view">
             <form className="courses-tab">
                 <input onChange={onChange} id="python" type="radio" name="courses-tab" defaultChecked={true}/>
                 <label htmlFor="python" id="python_label">Python</label>

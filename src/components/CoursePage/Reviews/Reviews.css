@@ -78,3 +78,21 @@
     text-align: center;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 1080px) {
+    .review_section {
+        width: 100%;
+    }
+    .user-review,
+    .review_card hr {
+        width: 90%;
+        margin: 1rem auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .user-comment,
+    .was-review-helpful {
+        font-size: 0.9rem;
+    }
+}
