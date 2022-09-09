@@ -69,7 +69,8 @@
     font-size: 0.9rem;
 }
 
-.instructors_name {
+.instructors_name,
+.instructors_name:hover {
     color: #c8bbf5;
 }
 

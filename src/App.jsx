@@ -15,8 +15,8 @@ export default function App() {
         <CoursesProvider>
             <NavBar setSearchWord={setSearchWord}/>
             <Routes>
-                <Route path="/" element={<HomePage SearchTerm={searchWord}/>} />
-                <Route path="/course_info/:courseId" element={<CoursePage/>} />
+                <Route path="/udemy-home-page-React" element={<HomePage SearchTerm={searchWord}/>} />
+                <Route path="/udemy-home-page-React/course_info/:courseId" element={<CoursePage/>} />
             </Routes>
             <Footer/>
         </CoursesProvider>

@@ -23,7 +23,7 @@ export default function CourseCardSticky({courseData}) {
             </div>
             <div className="side-bar-container">
                 <img src={courseData.image_750x422} alt="Course img" className="photo" style={{ display: x ? "block" : "none" }} ></img>
-                <div className="child" style={{ position: !x ? "fixed" : null, width: !x ? "18%" : null, top: !x ? "10px" : null, zIndex: "3000" }}>
+                <div className="child" style={{ position: !x ? "fixed" : null, width: !x ? "20%" : null, top: !x ? "10px" : null, zIndex: "3000" }}>
                 <h2 className="price">E£{price}</h2>
                 <div className='sidebar_buttons' >
                     <button className="add-to-cart">Add to cart</button>
