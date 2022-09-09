@@ -4,6 +4,7 @@ import PopupCard from '../PopupCard/PopupCard';
 import Badge from '../Badge';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
+import { Link } from 'react-router-dom';
 import './CourseCard.css';
 import '../PopupCard/TippyCard.css';
 
@@ -22,18 +23,18 @@ export default function CourseCard({course}){
     
     return (
         <OverlayTrigger delay={{ show: 250, hide: 250 }} className='tippycard' overlay={popover} placement='top-end' trigger={['hover', 'focus']} interactive={true}>
-            <div className="course-item" /*to={`course_info/${course.id}`*/>
+            <Link className="course-item" to={`/udemy-home-page-React/course_info/${course.id}`}>
                 <img className="course-img" src={course.image_750x422} alt="course"/>
-                <h3>{course.title}</h3>
+                <h3 className="course-title">{course.title}</h3>
                 <p className="author">{instructors}</p>
                 <div className="rating">
                     <span><p className="rating-score">{course.rating.toFixed(1)}</p></span>
                     <span className="stars"><Stars rating={course.rating}/></span>
                     <p className="rating-n">({course.num_reviews.toLocaleString('en-US')})</p>
                 </div>
-                <p className="price">E£{price.toLocaleString('en-US')}</p>
+                <p className="course-price">E£{price.toLocaleString('en-US')}</p>
                 {Badges}
-            </div>
+            </Link>
         </OverlayTrigger>
     );
 }

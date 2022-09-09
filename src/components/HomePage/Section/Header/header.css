@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 85rem;
+    width: 75%;
     position: relative;
     background-color: #F8F9FB;
     margin: auto;
@@ -33,7 +33,7 @@
 }
 
 .above-courses {
-    width: 85rem;
+    width: 70%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -42,7 +42,7 @@
     margin: 2rem auto;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1080px) {
     .head-bar {
         width: 25rem;
     }
@@ -51,6 +51,9 @@
     }
     .head-continer {
         margin: 0rem 1rem;
+    }
+    .above-courses {
+        width: 90%;
     }
 }
 
@@ -76,6 +79,9 @@
     }
     .head-bar h3 {
         font-size: 1.5rem;
+    }
+    .above-courses {
+        width: 90%;
     }
 }
 

@@ -13,7 +13,7 @@
     border: 1px solid #d1d7dc;
 }
 
-.course-item h3 {
+.course-title {
     font-size: 1rem;
     margin-top: 0.8rem;
     margin-bottom: 0.4rem;
@@ -23,6 +23,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: bold;
+    color: black;
+    text-decoration: none;
 }
 
 .rating {
@@ -75,10 +77,12 @@
     font-size: 1rem;
 }
 
-.price {
+.course-price {
     font-size: 1rem;
     font-weight: 700;
     margin: 0rem 0rem;
+    color: black;
+    text-decoration: none;
 }
 
 .course-img:hover {

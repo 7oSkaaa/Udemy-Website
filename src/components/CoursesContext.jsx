@@ -28,15 +28,13 @@ export const CoursesProvider = (props) => {
     const queryCourse = (courseId) => {
 
         if(courseId in coursesDb){
-            if(coursesDb[courseId].fetching){
+            if(coursesDb[courseId].fetching)
                 return null;
-            }
-            else{
+            else
                 return coursesDb[courseId];
-            }
         }
         else{
-
+            
             setCoursesDb((old) => ({
                 ...old,
                 [courseId]: {"fetching": true}
