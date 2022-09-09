@@ -1,4 +1,4 @@
-.courses-tab {
+.courses-tab-section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -9,32 +9,32 @@
     width: 70%;
 }
 
-.courses-tab label {
+.courses-tab-section label {
     font-weight: bold;
     color: grey;
     cursor: pointer;
 }
 
-.courses-tab>input[type="radio"] {
+.courses-tab-section>input[type="radio"] {
     display: none;
 }
 
-.courses-tab>input[type="radio"]:checked+label {
+.courses-tab-section>input[type="radio"]:checked+label {
     color: black;
 }
 
-.courses-tab>input[type="radio"]:hover+label {
+.courses-tab-section>input[type="radio"]:hover+label {
     color: black;
 }
 
 @media only screen and (max-width: 1200px) {
-    .courses-tab {
+    .courses-tab-section {
         width: 90%;
     }
 }
 
 @media only screen and (max-width: 500px) {
-    .courses-tab {
+    .courses-tab-section {
         font-size: 0.8rem;
         gap: 1rem;
     }

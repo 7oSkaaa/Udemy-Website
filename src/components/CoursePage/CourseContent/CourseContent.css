@@ -70,13 +70,22 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+.col-8 {
+    width: 62%;
+}
+
+.section-header-info {
+    min-width: fit-content;
+}
+
 @media only screen and (max-width: 1080px) {
     .course-content {
         width: 100%;
     }
     .section-header,
     .courses-content-header,
-    .course-content p {
+    .course-content p,
+    .section-details {
         width: 90%;
         margin: 0.5rem auto;
     }
@@ -90,6 +99,9 @@
     .section-header-title {
         font-size: 0.8rem;
     }
+    .section-details {
+        font-size: 0.7rem;
+    }
     .section-header {
         display: flex;
         flex-flow: column;
@@ -97,5 +109,14 @@
     .section-header-info {
         font-size: 0.8rem;
         margin: 0rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .section-details {
+        font-size: 0.6rem;
+    }
+    .col-8 {
+        width: 55%;
     }
 }

@@ -15,6 +15,12 @@ figure img:hover {
     width: 100% !important;
 }
 
+@media only screen and (max-width: 1080px) {
+    .categories_sections {
+        width: 90%;
+    }
+}
+
 @media only screen and (max-width: 500px) {
     .card-img-top {
         width: 100% !important;
