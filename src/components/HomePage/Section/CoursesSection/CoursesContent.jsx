@@ -9,9 +9,16 @@ import { CgSmileNone } from "react-icons/cg";
 
 export default function CoursesContent({tab, SearchTerm}) {
     
+    const checkCourse = (course) => {
+        const courseKeys = course.title.toLowerCase().split(' ');
+        const SearchTermKeys = SearchTerm.toLowerCase().split(' ');
+        return SearchTermKeys.every((key) => courseKeys.includes(key)) || course.title.toLowerCase().includes(SearchTerm.toLowerCase());
+    }
+
     const {header, description, title:category, items:courses} = tab;
-    const Filtered_Courses = courses.filter(course => course.title.toLowerCase().includes(SearchTerm.toLowerCase()));
-    const Courses_Cards = Filtered_Courses.map((course, idx) => <CourseCard key={idx} course = {course} className/>);
+    const Filtered_Courses = courses.filter(course => checkCourse(course));
+
+    const Courses_Cards = Filtered_Courses.map((course, idx) => <CourseCard key={idx} course={course} className/>);
     const [SlidesNum, set_SlidesNum] = React.useState(1);
     const {Mobile, Tablet, Desktop} = data.ScreenDimensions;
 
@@ -63,8 +70,6 @@ export default function CoursesContent({tab, SearchTerm}) {
 
     CompleteCourses();
     
-    console.log(Filtered_Courses);
-
     return (
         <div className="courses_content" id="rendered_courses">
             <div className="courses_content_descreption">
