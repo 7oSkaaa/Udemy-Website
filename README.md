@@ -1,12 +1,8 @@
 # Welcome to Udemy WebSite
 
----
-
 ***Using `React JS, Html, CSS, JS, BootStrap` to build this responsive website***
 
 ## Overview
-
----
 
 - The website consist of 2 Pages, the Home Page and the Course Page.
 
@@ -25,7 +21,6 @@
 
 ## Development
 
----
 You need to have `node` and `npm` installed on your computer to run the project.
 
 ```Bash
