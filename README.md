@@ -11,7 +11,6 @@
 - The Course Page is the page that contains the courses, it contains the header, the main content and the footer.
 
 - Your can see the Course Page of any course by clicking on the course card.
-  - But unfortunately, the course page of the first course of python is the only available one because the data isn't available.
 
 - The website is responsive, you can see the website on any device.
 

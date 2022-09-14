@@ -1,4 +1,4 @@
-import React, { useState, useContext, useLayoutEffect } from 'react';
+import React, { useContext } from 'react';
 import './CoursesContent.css';
 import CourseCard from './CourseCard';
 import Carousel from 'react-multi-carousel';
@@ -20,47 +20,41 @@ export default function CoursesContent() {
     const { Mobile, Tablet, Desktop, Large_Desktop } = ScreenDimensions;
     const { header, description, title, items:courses } = coursesList[currTab];
     const Filtered_Courses = courses.filter(course => checkCourse(course));
-    const [SlidesNum, set_SlidesNum] = useState(1);
     const Courses_Cards = Filtered_Courses.map((course, idx) => <CourseCard key={idx} course={course}/>);
-
-    function CompleteCourses(){
-        while(Courses_Cards.length < SlidesNum) 
-            Courses_Cards.push(<></>);
-    }
-
-    useLayoutEffect(() => {
-        function updateSize() {
-            const win_width = window.innerWidth;
-            if(win_width < Mobile.maxWidth)
-                set_SlidesNum(1);
-            else if(win_width < Tablet.maxWidth)
-                set_SlidesNum(3);
-            else
-                set_SlidesNum(4);
-        }
-        window.addEventListener('resize', updateSize);
-        updateSize();
-    }, [Mobile, Tablet, Desktop]);
 
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: Large_Desktop.maxWidth, min: Large_Desktop.minWidth },
-            items: 5
+            items: 5,
+            partialVisibilityGutter: 1,
+            slidesToSlide: 5
         },
         desktop: {
             breakpoint: { max: Desktop.maxWidth, min: Desktop.minWidth },
-            items: 4
+            items: 4,
+            partialVisibilityGutter: 1,
+            slidesToSlide: 4
         },
         tablet: {
             breakpoint: { max: Tablet.maxWidth, min: Tablet.minWidth },
-            items: 3
+            items: 3,
+            partialVisibilityGutter: 1,
+            slidesToSlide: 3
         },
         mobile: {
             breakpoint: { max: Mobile.maxWidth, min: Mobile.minWidth },
-            items: 1
+            items: 1,
+            partialVisibilityGutter: 1,
+            slidesToSlide: 1
         }
     };
       
+    function CompleteCourses(){
+        const currWidth = window.innerWidth;
+        const SlidesNum = currWidth < Mobile.minWidth ? 1 : currWidth < Tablet.minWidth ? 2 : currWidth < Desktop.minWidth ? 3 : 4; 
+        while(Courses_Cards.length < SlidesNum)
+            Courses_Cards.push(<></>);
+    }
 
     CompleteCourses();
     
@@ -74,7 +68,7 @@ export default function CoursesContent() {
             <div className="courses_cards">
                 {
                     Filtered_Courses.length ?
-                        <Carousel responsive={responsive} containerClass='container' slidesToSlide={SlidesNum} focusOnSelect={true} rewind={true} rewindWithAnimation={true} partialVisible={false} itemClass='course-item' keyBoardControl={true}>
+                        <Carousel responsive={responsive} containerClass='container' rewind={true} rewindWithAnimation={true}  itemClass='course-item' keyBoardControl={true}  autoPlay={true} autoPlaySpeed={5000} draggable={true} swipeable={true} ssr={true}>
                             {Courses_Cards}
                         </Carousel>
                     :
