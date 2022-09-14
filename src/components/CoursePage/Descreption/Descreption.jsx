@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import './Descreption.css'
 
 export default function Descreption({courseData}) {
     
-    const [show_more, set_show_more] = React.useState(0);
+    const [show_more, set_show_more] = useState(false);
     const descriptions = courseData.descriptions;
 
     return (

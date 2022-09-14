@@ -35,6 +35,12 @@
     font-size: 1rem;
 }
 
+.hidden_view {
+    overflow: hidden;
+    height: 200px;
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
 @media only screen and (max-width: 1080px) {
     .Objectives-card {
         width: 100%;
