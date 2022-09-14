@@ -27,7 +27,7 @@ function LineDesc({icon, text}){
 }
 
 
-export default function CourseCardSticky({courseData, isCardAppear}) {
+export default function CourseCardSticky({courseData, isCardAppear, isStickyCardDisappear}) {
     
     return (
         <div>
@@ -39,7 +39,7 @@ export default function CourseCardSticky({courseData, isCardAppear}) {
                     <p className="on_photo">Preview this course</p>
                     <img src={adjust_img(courseData.img)} alt="Course img" className="photo" style={{ display: isCardAppear ? "block" : "none" }} ></img>
                 </div>
-                <div className="child" style={{ position: !isCardAppear ? "fixed" : null, width: !isCardAppear ? "20%" : null, top: !isCardAppear ? "10px" : null, zIndex: "3000" }}>
+                <div className='child' style={{ position: !isCardAppear ? "fixed" : null, width: !isCardAppear ? "20%" : null, top: isStickyCardDisappear? "-20%" : !isCardAppear ? "10px" : null, zIndex: isStickyCardDisappear ? "0" : "3000" }}>
                 <div className="price">
                     <p>E£{courseData.price}</p> 
                     {courseData.discount_percentage ? <s className="__discount">{courseData.oldprice}</s> : null} 

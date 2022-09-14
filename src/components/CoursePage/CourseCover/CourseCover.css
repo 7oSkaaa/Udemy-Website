@@ -50,6 +50,7 @@
     margin: 1rem 0rem;
     gap: 0.5rem;
     align-items: baseline;
+    width: 100%;
 }
 
 .rate_number {

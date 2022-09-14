@@ -14,22 +14,26 @@ export const CoursesProvider = (props) => {
         Mobile: {
             maxWidth: 464,
             minWidth: 0,
-            height: 800
+            coverHeight: 800,
+            CardHeight: 4200
         },
         Tablet: {
             maxWidth: 1024,
             minWidth: 464,
-            height: 900
+            coverHeight: 900,
+            CardHeight: 4000
         },
         Desktop: {
             maxWidth: 1440,
             minWidth: 1024,
-            height: 1000
+            coverHeight: 1000,
+            CardHeight: 4000
         },
         Large_Desktop: {
             maxWidth: 3000,
             minWidth: 1440,
-            height: 400
+            coverHeight: 400,
+            CardHeight: 3400
         }
     }
 

@@ -37,7 +37,8 @@
 
 .hidden_view {
     overflow: hidden;
-    height: 200px;
+    height: fit-content;
+    max-height: 100px;
     mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
 
