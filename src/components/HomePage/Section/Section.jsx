@@ -13,7 +13,7 @@ export default function Section() {
     return (
         <div>
             <HeaderSection/> 
-            <Tabs/>
+            {coursesList ? <Tabs/> : null}
             {coursesList ?  <CoursesContent/> : <Loader/>}
         </div>
     );

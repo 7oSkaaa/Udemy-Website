@@ -11,25 +11,25 @@ export const CoursesProvider = (props) => {
     const [currTab, setCurrTab] = useState("python_res");
     const [searchTerm, setSearchTerm] = useState('');
     const ScreenDimensions = {
-        "Mobile": {
-            "maxWidth": 464,
-            "minWidth": 0,
-            "height": 800
+        Mobile: {
+            maxWidth: 464,
+            minWidth: 0,
+            height: 800
         },
-        "Tablet": {
-            "maxWidth": 1024,
-            "minWidth": 464,
-            "height": 900
+        Tablet: {
+            maxWidth: 1024,
+            minWidth: 464,
+            height: 900
         },
-        "Desktop": {
-            "maxWidth": 3000,
-            "minWidth": 1024,
-            "height": 1000
+        Desktop: {
+            maxWidth: 1440,
+            minWidth: 1024,
+            height: 1000
         },
-        "Large_Desktop": {
-            "maxWidth": 3000,
-            "minWidth": 1440,
-            "height": 400
+        Large_Desktop: {
+            maxWidth: 3000,
+            minWidth: 1440,
+            height: 400
         }
     }
 

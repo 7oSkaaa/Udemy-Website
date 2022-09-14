@@ -17,7 +17,7 @@ export default function CoursesContent() {
         return SearchTermKeys.every((key) => courseKeys.includes(key)) || course.title.toLowerCase().includes(searchTerm.toLowerCase());
     }
 
-    const { Mobile, Tablet, Desktop } = ScreenDimensions;
+    const { Mobile, Tablet, Desktop, Large_Desktop } = ScreenDimensions;
     const { header, description, title, items:courses } = coursesList[currTab];
     const Filtered_Courses = courses.filter(course => checkCourse(course));
     const [SlidesNum, set_SlidesNum] = useState(1);
@@ -43,31 +43,24 @@ export default function CoursesContent() {
     }, [Mobile, Tablet, Desktop]);
 
     const responsive = {
-        desktop: {
-            breakpoint: {
-                max: Desktop.maxWidth,
-                min: Desktop.minWidth
-            },
-            items: 4,
-            partialVisibilityGutter: 40
+        superLargeDesktop: {
+            breakpoint: { max: Large_Desktop.maxWidth, min: Large_Desktop.minWidth },
+            items: 5
         },
-        mobile: {
-            breakpoint: {
-                max: Mobile.maxWidth,
-                min: Mobile.minWidth
-            },
-            items: 1,
-            partialVisibilityGutter: 30
+        desktop: {
+            breakpoint: { max: Desktop.maxWidth, min: Desktop.minWidth },
+            items: 4
         },
         tablet: {
-            breakpoint: {
-                max: Tablet.maxWidth,
-                min: Tablet.minWidth
-            },
-            items: 3,
-            partialVisibilityGutter: 30
+            breakpoint: { max: Tablet.maxWidth, min: Tablet.minWidth },
+            items: 3
+        },
+        mobile: {
+            breakpoint: { max: Mobile.maxWidth, min: Mobile.minWidth },
+            items: 1
         }
-    };    
+    };
+      
 
     CompleteCourses();
     
@@ -76,14 +69,14 @@ export default function CoursesContent() {
             <div className="courses_content_descreption">
                 <h2>{header}</h2>
                 <p>{description}</p>
-                <a className="explore" href="./index.html">Explore {title}</a>
+                <a className="explore" href="/udemy-home-page-React">Explore {title}</a>
             </div>
             <div className="courses_cards">
                 {
                     Filtered_Courses.length ?
                         <Carousel responsive={responsive} containerClass='container' slidesToSlide={SlidesNum} focusOnSelect={true} rewind={true} rewindWithAnimation={true} partialVisible={false} itemClass='course-item' keyBoardControl={true}>
                             {Courses_Cards}
-                        </Carousel> 
+                        </Carousel>
                     :
                         <div className='No_Data_Preview'>
                             <CgSmileNone/>
