@@ -27,13 +27,13 @@ export const CoursesProvider = (props) => {
             maxWidth: 1440,
             minWidth: 1024,
             coverHeight: 1000,
-            CardHeight: 4000
+            CardHeight: 3200
         },
         Large_Desktop: {
             maxWidth: 3000,
             minWidth: 1440,
             coverHeight: 400,
-            CardHeight: 3400
+            CardHeight: 3200
         }
     }
 

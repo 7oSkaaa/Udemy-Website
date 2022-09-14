@@ -1,62 +1,85 @@
-._footer {
-    margin-top: 5rem;
-    display: flex;
-    background-color: black;
-    justify-content: space-between;
-    height: 10rem;
-    padding: 0 2rem;
+.footer {
+    background-color: #1c1d1f;
+    padding: 2rem;
 }
 
-.left_footer {
-    position: relative;
-}
-
-.left_footer img {
-    position: absolute;
-    bottom: 30%;
-}
-
-.right_footer {
-    color: white;
-    margin: 0.5rem;
-    padding: 1rem;
+.topFooter {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 10px;
 }
 
-.right_footer p {
-    color: white;
-    font-size: 0.8rem;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-#_language_footer {
-    color: white;
+.Globe_Button {
     display: flex;
-    flex-grow: 0.2;
-    width: 10rem;
-    background-color: black;
-    font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
-    gap: 1rem;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    border: 1px solid white;
-    padding-left: 1.5rem;
+    gap: 10px;
 }
 
-@media only screen and (max-width: 500px) {
-    ._footer {
-        flex-direction: column;
-        height: 16rem;
-        justify-content: space-evenly;
+._links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+._links>a {
+    color: white;
+    text-decoration: none;
+    font-size: 90%;
+}
+
+._links>a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.button {
+    order: -1;
+}
+
+.button>button {
+    background-color: transparent;
+    color: white;
+    border: solid 1px white;
+    width: 10rem;
+    padding: 0.5rem;
+}
+
+.bottomFooter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bottomFooter>img {
+    width: 100px;
+    margin-top: 20px;
+}
+
+.bottomFooter>p {
+    color: white;
+    font-size: 80%;
+}
+
+.forSticky {
+    height: 50px;
+}
+
+@media screen and (min-width: 701px) {
+    .topFooter {
+        flex-direction: row;
+        justify-content: space-between;
     }
-    .left_footer img {
-        position: relative;
+    .button {
+        order: 1;
     }
-    .right_footer {
-        margin: 0;
-        padding: 0;
-        gap: 2rem;
+    .bottomFooter {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .bottomFooter>p {
+        margin-top: 40px;
     }
 }
