@@ -92,6 +92,12 @@
     .head-bar h3 {
         font-size: 1rem;
     }
+    .above-courses p {
+        font-size: 1rem;
+    }
+    .above-courses h1 {
+        font-size: 1.5rem;
+    }
 }
 
 @media only screen and (max-width: 1400px) {
