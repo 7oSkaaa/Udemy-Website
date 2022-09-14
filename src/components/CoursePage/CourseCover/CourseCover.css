@@ -33,6 +33,11 @@
     font-weight: bold;
 }
 
+.breadcrumb-item+.breadcrumb-item::before {
+    content: var(--bs-breadcrumb-divider, ">");
+    color: whitesmoke;
+}
+
 .headline {
     font-size: 1.2rem;
     margin: 1rem 0rem;
@@ -96,14 +101,50 @@
     font-size: 1.2rem;
 }
 
-.cover_image {
-    width: 100%;
-    object-fit: cover;
-    margin: 1rem auto;
+.Card_header_cover {
+    position: relative;
+    margin: 1rem 0rem;
+    background: black;
+    overflow: hidden;
 }
 
-.price-cover {
-    font-size: 2rem;
+.on_photo_cover {
+    position: absolute;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    top: 90%;
+    left: 50%;
+    width: max-content;
+    z-index: 1000;
+}
+
+.Card_header_cover svg {
+    position: absolute;
+    font-size: 5rem;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    z-index: 1000;
+}
+
+.Card_header_cover svg {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.photo_cover {
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.price_cover {
+    font-size: 1.5rem;
 }
 
 .add-to-cart-cover {
@@ -140,6 +181,17 @@
     color: white;
 }
 
+.__discount-cover {
+    color: gray;
+}
+
+._rate {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
 @media only screen and (max-width: 1080px) {
     .cover-items {
         width: 80%;
@@ -167,7 +219,7 @@
     ._rating,
     .review_number,
     .subscribers_numbers {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         margin: 0.2rem 0rem;
     }
     ._rating svg {
@@ -193,13 +245,86 @@
     .share-gift-apply-cover {
         font-size: 0.7rem;
     }
+    .__discount-cover {
+        color: gray;
+    }
+    ._rate {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        gap: 0.5rem;
+    }
+    .stars svg {
+        font-size: 1rem;
+    }
+    .price_cover {
+        display: flex !important;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .__discount_cover {
+        font-weight: bolder;
+        font-size: 1.5rem;
+        font-family: 'Times New Roman', Times, serif;
+        color: gray;
+    }
+    .discount_per_cover {
+        font-weight: 500;
+        font-size: 1.5rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .expire_date_cover {
+        font-weight: 500;
+        font-size: 1.2rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        display: flex;
+        align-items: baseline;
+        gap: 0.5rem;
+        color: #ffa5a0;
+    }
 }
 
 @media only screen and (max-width: 500px) {
-    ._rating,
-    .review_number,
-    .subscribers_numbers {
-        font-size: 0.5rem;
-        margin: 0.2rem 0rem;
+    ._rating {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 1rem;
+    }
+    .price_cover {
+        font-size: 1.5rem;
+    }
+    .__discount_cover {
+        font-size: 1.2rem;
+    }
+    .on_photo_cover {
+        font-size: 1rem;
+    }
+    .Card_header_cover svg {
+        font-size: 4rem;
+        padding: 0.2rem 0.2rem 0.2rem 0.5rem;
+    }
+    .expire_date_cover {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .on_photo_cover {
+        font-size: 0.8rem;
+    }
+    .Card_header_cover svg {
+        font-size: 3rem;
+        padding: 0.2rem 0.2rem 0.2rem 0.5rem;
+    }
+    .price_cover {
+        font-size: 1.2rem;
+        align-items: baseline;
+    }
+    .__discount_cover,
+    .discount_per_cover {
+        font-size: 1.0rem;
+    }
+    .expire_date_cover {
+        font-size: 1rem;
     }
 }

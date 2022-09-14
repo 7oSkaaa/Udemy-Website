@@ -2,11 +2,11 @@ import React from 'react'
 import Section from './Section';
 import Categories from './Categories';
 
-export default function HomePage({SearchTerm}) {
+export default function HomePage() {
 
     return (
         <>
-            <Section SearchTerm={SearchTerm}/>
+            <Section/>
             <Categories/>
         </>
     )

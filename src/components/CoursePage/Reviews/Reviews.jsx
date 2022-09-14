@@ -7,21 +7,31 @@ import { HiOutlineThumbUp, HiOutlineThumbDown } from "react-icons/hi";
 
 const MaxShownComments = 3;
 
-function Review({review}){
+function adjustInitial(name, init){
+    if(init > 0)
+        return init;
+    name = name.split(" ");
+    init = name[0][0];
+    if(name.length > 1)
+        init += name[1][0];
+    return init;
+}
+
+function Review({reviewer}){
     return (
         <div className="review_card">
             <div className="user-review">
                 <div className="initials-col d-none d-md-block">
                     <div className="initials">
-                        <span>{review.user.initials}</span>
+                        <span>{adjustInitial(reviewer.name, reviewer.initials)}</span>
                     </div>
                 </div>
                 <div>
-                    <h5 className="user-name">{review.user.public_display_name}</h5>
+                    <h5 className="user-name">{reviewer.name}</h5>
                     <div className="user-stars">
-                        <Stars rating={review.rating} />
+                        <Stars rating={reviewer.rating} />
                     </div>
-                    <p className="user-comment">{review.content}</p>
+                    <p className="user-comment">{reviewer.review}</p>
                     <p className="was-review-helpful">Was this review helpful?</p>
                     <div className='react-buttons'>
                     <button className="thumbs-btn">
@@ -42,11 +52,11 @@ function Review({review}){
 export default function Reviews({courseData}) {
 
     const [show_more, set_show_more] = React.useState(0);
-    const reviewsData = courseData.users_reviews;
+    const reviewers = courseData.reviewers;
 
     return (
         <div className="review_section" id="Reviews">
-            { reviewsData.map((item, idx) => ((show_more || idx < MaxShownComments) ? <Review key={idx} review={item} /> : <div key={idx}></div> )) }
+            { reviewers.map((item, idx) => ((show_more || idx < MaxShownComments) ? <Review key={idx} reviewer={item} /> : <div key={idx}></div> )) }
             <div className="show-more-less-btn" onClick={() => set_show_more(!show_more)}>
                 {
                     show_more ? 

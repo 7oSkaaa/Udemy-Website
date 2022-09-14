@@ -1,32 +1,49 @@
 import React from 'react'
 import Stars from '../../HomePage/Section/CoursesSection/CourseCard/Stars'
+import Badge from '../../HomePage/Section/CoursesSection/Badge'
+import StickyCover from '../StickyCover' 
 import { MdNewReleases, MdLanguage, MdClosedCaption } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
 import { Breadcrumb } from "react-bootstrap"
+import { IoMdAlarm } from 'react-icons/io'
+import { BiPlay } from 'react-icons/bi'
 import './CourseCover.css'
 
-export default function CourseCover({courseData}) {
+function adjust_img(img){
+    img = img.split('/');
+    img[4] = '750x422';
+    img = img.join('/');
+    return img;
+}
 
-    const instructors = courseData.visible_instructors.map((instructor, idx) => <a key={idx} href='/#' className='instructors_name'>{instructor.display_name}</a>);
-    const price = parseInt(courseData.avg_rating * courseData.num_published_lectures);
+export default function CourseCover({courseData, isCoverAppear}) {
+
+    const instructors = courseData.instructors.map((instructor, idx) => <a key={idx} href='/#' className='instructors_name'>{instructor.name}</a>);
 
     return (
-        <div className="course-cover">
+        <div className="course-cover">  
             <div className='cover-items'>
                 <Breadcrumb className="breadcrumb _path">
                     <Breadcrumb.Item linkAs={Link} linkProps={{to: "/udemy-home-page-React/"}}>Home</Breadcrumb.Item>
                     <Breadcrumb.Item linkAs={HashLink} linkProps={{to: "/udemy-home-page-React/#courses_view"}}>Courses</Breadcrumb.Item>
-                    <Breadcrumb.Item active>{courseData.context_info.label.display_name}</Breadcrumb.Item>
+                    <Breadcrumb.Item active>{courseData.title}</Breadcrumb.Item>
                 </Breadcrumb>
-                <img className='cover_image hidden_items' src={courseData.image_750x422} alt="Course img"/>
+                <div className="Card_header_cover hidden_items">
+                    <BiPlay/>
+                    <p className="on_photo_cover">Preview this course</p>
+                    <img src={adjust_img(courseData.img)} alt="Course img" className="photo_cover"/>
+                </div>
                 <h3>{courseData.title}</h3>
-                <p className='headline'>{courseData.headline}</p>
+                <p className='headline'>{courseData.description}</p>
                 <div className='_rating'>
-                    <span className='rate_number'>{courseData.rating.toPrecision(2)}</span>
-                    <Stars rating={courseData.rating}/>
-                    <a href='/#' className='review_number'>({courseData.num_reviews} ratings)</a>
-                    <span className='subscribers_numbers'>{courseData.num_subscribers} students</span>
+                    <div className='_rate'>
+                        <span className='rate_number'>{courseData.rating.toPrecision(2)}</span>
+                        <Stars rating={courseData.rating}/>
+                    </div>
+                    <a href='/#' className='review_number'>({courseData.totalreviews} ratings)</a>
+                    <span className='subscribers_numbers'>{courseData.enrollments} students</span>
+                    {courseData.bestseller ? <Badge badge_text={'Bestseller'}/> : null}
                 </div>
                     <div className='instructors'>
                         <p>Created by </p>
@@ -35,23 +52,31 @@ export default function CourseCover({courseData}) {
                     <div className='additional_info'>
                         <div className='last_update_date'>
                             <MdNewReleases/>
-                            <p>Last Update {courseData.last_update_date}</p>
+                            <p>Last Update {courseData.lastupdated}</p>
                         </div>
                         <div className='language'>
                             <MdLanguage/>
-                            <p>{courseData.locale.simple_english_title}</p>
+                            <p>{courseData.locale}</p>
+                        </div> 
+                        <div className='caption'>
+                            <MdClosedCaption/>
+                            <p>{courseData.caption}</p>
                         </div>
-                        {
-                            courseData.has_closed_caption ? 
-                                <div className='caption'>
-                                    <MdClosedCaption/>
-                                    <p>{courseData.caption_languages}</p>
-                                </div>
-                            :   
-                                null
-                        }
                     </div>
-                    <h2 className="price-cover hidden_items">E£{price}</h2>
+                    <div className="price_cover hidden_items">
+                        <p>E£{courseData.price}</p> 
+                        {courseData.discount_percentage ? <s className="__discount_cover">{courseData.oldprice}</s> : null} 
+                        {courseData.discount_percentage ? <span className="discount_per_cover">{courseData.discount_percentage}% off</span> : null}
+                    </div>
+                    {
+                        courseData.discount_percentage ? 
+                            <div className="expire_date_cover hidden_items">
+                                <IoMdAlarm/>
+                                <p dangerouslySetInnerHTML={{ __html: courseData.discount_expiration }} />
+                            </div>
+                        :
+                            null
+                    }
                     <button className="add-to-cart-cover hidden_items">Add to cart</button>
                     <div className="money-back-cover hidden_items">30-Day Money-Back Guarantee</div>
                     <div className="share-gift-apply-cover hidden_items">
@@ -60,6 +85,12 @@ export default function CourseCover({courseData}) {
                         <a href='\#' className='links-cover hidden_items'>Apply Coupon</a>
                     </div>
             </div>
+            {
+                isCoverAppear ?
+                    <StickyCover courseData={courseData}/>
+                :
+                    null
+            }
         </div>
     )
 }

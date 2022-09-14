@@ -1,33 +1,34 @@
-import React from 'react';
+import React, { useState, useContext, useLayoutEffect } from 'react';
 import './CoursesContent.css';
 import CourseCard from './CourseCard';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './PopupCard/TippyCard.css';
-import data from '../../ScreenDimensions/ScreenDimensions.json';
 import { CgSmileNone } from "react-icons/cg"; 
+import { CoursesContext } from '../../../CoursesContext';
 
-export default function CoursesContent({tab, SearchTerm}) {
+export default function CoursesContent() {
     
+    const { coursesList, currTab, searchTerm, ScreenDimensions } = useContext(CoursesContext);
+
     const checkCourse = (course) => {
         const courseKeys = course.title.toLowerCase().split(' ');
-        const SearchTermKeys = SearchTerm.toLowerCase().split(' ');
-        return SearchTermKeys.every((key) => courseKeys.includes(key)) || course.title.toLowerCase().includes(SearchTerm.toLowerCase());
+        const SearchTermKeys = searchTerm.toLowerCase().split(' ');
+        return SearchTermKeys.every((key) => courseKeys.includes(key)) || course.title.toLowerCase().includes(searchTerm.toLowerCase());
     }
 
-    const {header, description, title:category, items:courses} = tab;
+    const { Mobile, Tablet, Desktop } = ScreenDimensions;
+    const { header, description, title, items:courses } = coursesList[currTab];
     const Filtered_Courses = courses.filter(course => checkCourse(course));
-
-    const Courses_Cards = Filtered_Courses.map((course, idx) => <CourseCard key={idx} course={course} className/>);
-    const [SlidesNum, set_SlidesNum] = React.useState(1);
-    const {Mobile, Tablet, Desktop} = data.ScreenDimensions;
+    const [SlidesNum, set_SlidesNum] = useState(1);
+    const Courses_Cards = Filtered_Courses.map((course, idx) => <CourseCard key={idx} course={course}/>);
 
     function CompleteCourses(){
         while(Courses_Cards.length < SlidesNum) 
             Courses_Cards.push(<></>);
     }
 
-    React.useLayoutEffect(() => {
+    useLayoutEffect(() => {
         function updateSize() {
             const win_width = window.innerWidth;
             if(win_width < Mobile.maxWidth)
@@ -75,7 +76,7 @@ export default function CoursesContent({tab, SearchTerm}) {
             <div className="courses_content_descreption">
                 <h2>{header}</h2>
                 <p>{description}</p>
-                <a className="explore" href="./index.html">Explore {category}</a>
+                <a className="explore" href="./index.html">Explore {title}</a>
             </div>
             <div className="courses_cards">
                 {

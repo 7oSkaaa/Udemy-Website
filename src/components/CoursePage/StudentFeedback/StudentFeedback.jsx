@@ -13,8 +13,6 @@ function Par({ratio}) {
 }
 
 export default function StudentFeedback({courseData}) {
-
-    const {rating: Rate, num_reviews: Reviews, rating_distribution: FeedbackData} = courseData;
     
     return (
         <div className='feedback-sections'>
@@ -23,22 +21,22 @@ export default function StudentFeedback({courseData}) {
                 <Row>
                     <div className='course-rate'>
                         <Col md={3} className='feedback-rating'>
-                            <p className="big-rating">{Rate.toPrecision(2)}</p>
-                            <Stars rating={Rate}/>
+                            <p className="big-rating">{courseData.rating.toPrecision(2)}</p>
+                            <Stars rating={courseData.rating}/>
                             <p className="big-course-rating">Course Rating</p>
                         </Col>
                         <Col md={9}>
                             <Row className='rate-ratio'>
                                 {
-                                    Object.keys(FeedbackData).reverse().map((item, idx) => (
+                                    courseData.feedbacks.map((item, idx) => (
                                         <div key={idx} className='right_column'>
                                             <Col md={7}>
-                                                <Par key={idx} ratio={100 * FeedbackData[item].count / Reviews} />
+                                                <Par key={idx} ratio={item.percentage} />
                                             </Col>
                                             <Col md={5}>
                                                 <div key={idx} className="par-stars">
-                                                    <Stars key={idx} rating={FeedbackData[item].rating}/> 
-                                                    <p>{(100 * FeedbackData[item].count/Reviews).toPrecision(2)}%</p>
+                                                    <Stars key={idx} rating={item.value}/> 
+                                                    <p>{(item.percentage).toPrecision(2)}%</p>
                                                 </div>
                                             </Col>
                                         </div>

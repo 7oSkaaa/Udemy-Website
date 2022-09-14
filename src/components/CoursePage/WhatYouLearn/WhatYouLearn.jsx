@@ -4,7 +4,7 @@ import './WhatYouLearn.css'
 
 export default function WhatYouLearn({courseData}) {
     
-    const WhatYouLearnList = courseData.objectives_summary.map((item, idx) => (<p key={idx} className='learn_target'><MdOutlineDone/>{item}</p>));
+    const WhatYouLearnList = courseData.learnitems.map((item, idx) => (<p key={idx} className='learn_target'><MdOutlineDone/>{item.text}</p>));
 
     return (
         <section className='Objectives-card' id="Overview">

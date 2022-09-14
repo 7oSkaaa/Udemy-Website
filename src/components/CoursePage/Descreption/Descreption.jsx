@@ -6,13 +6,13 @@ import './Descreption.css'
 export default function Descreption({courseData}) {
     
     const [show_more, set_show_more] = React.useState(0);
-    const description = courseData.description;
+    const descriptions = courseData.descriptions;
 
     return (
         <div className='description-section'>
             <div className="description">
                 <h4>Description</h4>
-                <div className={!show_more ? "description-html_show_more" : "description-html"} dangerouslySetInnerHTML={{ __html: description }} />
+                <div className={!show_more ? "description-html_show_more" : "description-html"} dangerouslySetInnerHTML={{ __html: descriptions }} />
                 <div className="show-more-less-desc-btn" onClick={ () => set_show_more(!show_more)}>
                     {
                         show_more ? 

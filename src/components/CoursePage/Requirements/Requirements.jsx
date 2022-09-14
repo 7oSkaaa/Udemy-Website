@@ -3,8 +3,8 @@ import './Requirements.css'
 
 export default function Requirements({courseData}) {
     
-    const requirementsData = courseData.requirements_data.items;
-    const requirementsList = requirementsData.map((item, idx) => (<li key={idx}>{item}</li>));
+    const requirementsData = courseData.requirements;
+    const requirementsList = requirementsData.map((item, idx) => (<li key={idx}>{item.text}</li>));
 
     return (
         <div className="requirements-section">

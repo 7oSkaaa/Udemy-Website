@@ -1,5 +1,23 @@
+.tab_container {
+    display: flex;
+    width: 100%;
+    border: 2px solid #e5e5e5;
+    background-color: #ffffff;
+}
+
+.sticky {
+    position: fixed;
+    z-index: 1000;
+}
+
+.tab_section {
+    margin: auto;
+    width: 60%;
+}
+
 .nav-link {
     color: gray;
+    padding: 1rem 2rem;
 }
 
 .nav-link.active {
@@ -12,23 +30,30 @@
 
 .nav-link:hover {
     color: black;
+    border-bottom: 2px solid black !important;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
 }
 
 .nav-link,
 .nav-link.active {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
 .nav {
     display: flex;
-    justify-content: flex-start;
-    padding-left: 19%;
+    width: 70%;
+    border: 0px;
 }
 
 @media only screen and (max-width: 1080px) {
-    .nav {
-        padding-left: 3%;
+    .tab_section {
+        width: 90%;
+    }
+    .nav-link {
+        padding: 1rem 1rem;
     }
 }
 

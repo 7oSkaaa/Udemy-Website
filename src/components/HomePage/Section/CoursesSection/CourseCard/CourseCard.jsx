@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Stars from './Stars';
 import PopupCard from '../PopupCard/PopupCard';
 import Badge from '../Badge';
@@ -7,14 +7,20 @@ import Popover from 'react-bootstrap/Popover';
 import { Link } from 'react-router-dom';
 import './CourseCard.css';
 import '../PopupCard/TippyCard.css';
+import { CoursesContext } from '../../../../CoursesContext';
 
+function adjust_img(img){
+    img = img.split('/');
+    img[4] = '750x422';
+    img = img.join('/');
+    return img;
+}
 
 export default function CourseCard({course}){
 
-    const instructors = course.visible_instructors.map(instructor => instructor.title).join(', ');
-    const price = parseInt(course.num_published_lectures * course.avg_rating_recent);
-    const Badges = course.badges.map((badge, idx) => <Badge key={idx} badge_text={badge.badge_text}/>);
-
+    const instructors = course.instructors.map(instructor => instructor.name).join(', ');
+    const { currTab } = useContext(CoursesContext);
+    
     const popover = (props) => (
         <Popover id="button-tooltip" {...props}>
           <PopupCard course={course}/>
@@ -23,17 +29,17 @@ export default function CourseCard({course}){
     
     return (
         <OverlayTrigger delay={{ show: 250, hide: 250 }} className='tippycard' overlay={popover} placement='top-end' trigger={['hover', 'focus']} interactive={true}>
-            <Link className="course-item" to={`/udemy-home-page-React/course_info/${course.id}`}>
-                <img className="course-img" src={course.image_750x422} alt="course"/>
+            <Link className="course-item" to={`/udemy-home-page-React/course_info/${currTab}/${course.id}`}>
+                <img className="course-img" src={adjust_img(course.img)} alt="course"/>
                 <h3 className="course-title">{course.title}</h3>
                 <p className="author">{instructors}</p>
                 <div className="rating">
                     <span><p className="rating-score">{course.rating.toFixed(1)}</p></span>
                     <span className="stars"><Stars rating={course.rating}/></span>
-                    <p className="rating-n">({course.num_reviews.toLocaleString('en-US')})</p>
+                    <p className="rating-n">({course.totalreviews.toLocaleString('en-US')})</p>
                 </div>
-                <p className="course-price">E£{price.toLocaleString('en-US')}</p>
-                {Badges}
+                <p className="course-price">E£{course.price} {course.oldprice !== course.price ? <s className="__discount-card">{course.oldprice}</s> : null}</p>
+                {course.bestseller ? <Badge badge_text={'Bestseller'}/> : <></>}
             </Link>
         </OverlayTrigger>
     );

@@ -23,12 +23,16 @@
 }
 
 .learn_target {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 11fr;
     gap: 0.7rem;
     align-items: center;
     font-size: 0.9rem;
     align-items: baseline;
+}
+
+.learn_target svg {
+    font-size: 1rem;
 }
 
 @media only screen and (max-width: 1080px) {

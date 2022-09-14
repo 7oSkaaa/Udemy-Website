@@ -16,7 +16,7 @@ export default function Data({date}){
         '12': 'December'
     }
 
-    const [yy, mm] = date.split('-');
+    const [mm, yy] = date.split('/');
 
     return (
         <p className="last_update">

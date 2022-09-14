@@ -6,62 +6,77 @@ export const CoursesContext = createContext({});
 export const CoursesProvider = (props) => {
 
     const {children} = props;
-    const [coursesDb, setCoursesDb] = useState({});
     const [coursesList, setCoursesList] = useState();
     const [topCategories, setTopCategories] = useState();
+    const [currTab, setCurrTab] = useState("python_res");
+    const [searchTerm, setSearchTerm] = useState('');
+    const ScreenDimensions = {
+        "Mobile": {
+            "maxWidth": 464,
+            "minWidth": 0,
+            "height": 800
+        },
+        "Tablet": {
+            "maxWidth": 1024,
+            "minWidth": 464,
+            "height": 900
+        },
+        "Desktop": {
+            "maxWidth": 3000,
+            "minWidth": 1024,
+            "height": 1000
+        },
+        "Large_Desktop": {
+            "maxWidth": 3000,
+            "minWidth": 1440,
+            "height": 400
+        }
+    }
 
     useEffect(() => {
 
-        fetch("https://api.npoint.io/97d7e0d71e507947a59f")
+        fetch("https://myjson.dit.upm.es/api/bins/9i2i")
             .then((res) => res.json())
             .then((res) => {
                 setCoursesList(res.data);
-            });    
-    
+            });
+            
         fetch("https://api.npoint.io/5d666b620e2b069620a2")
             .then((res) => res.json())
             .then((res) => {
                 setTopCategories(res);
             });
+
     }, []);
     
-    const queryCourse = (courseId) => {
+    const queryCourse = (courseTab, courseId) => {
 
-        if(courseId in coursesDb){
-            if(coursesDb[courseId].fetching)
-                return null;
-            else
-                return coursesDb[courseId];
-        }
-        else{
-            
-            setCoursesDb((old) => ({
-                ...old,
-                [courseId]: {"fetching": true}
-            }));
-
-            fetch("https://api.npoint.io/c6f4ed954b5aad734f00")
-                .then(res => res.json())
-                .then(res => fetch(`https://api.npoint.io/${res[courseId]}`))
-                .then(res => res.json())
-                .then(res => {
-                    setCoursesDb(old => ({
-                        ...old, 
-                        [courseId] : {...res, 
-                            "fetching": false
-                        }
-                    }));
-                })
-
+        if(coursesList === undefined) {
+            fetch("https://myjson.dit.upm.es/api/bins/9i2i")
+            .then((res) => res.json())
+            .then((res) => {
+                setCoursesList(res.data);
+            });
             return null;
         }
+
+        const courses = coursesList[courseTab].items;
+
+        for(let course of courses)
+            if(course.id === courseId)
+                return course;
+        
     }
-    
+
     const coursesContext = {
-        coursesDb,
         coursesList,
         topCategories,
-        queryCourse
+        currTab,
+        searchTerm,
+        ScreenDimensions,
+        queryCourse,
+        setCurrTab,
+        setSearchTerm
     };
     
     return <CoursesContext.Provider value={coursesContext}>{children}</CoursesContext.Provider>;

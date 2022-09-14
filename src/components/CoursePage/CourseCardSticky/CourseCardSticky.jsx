@@ -1,30 +1,59 @@
-import React, { useState } from "react";
+import React from "react";
 import { MdOndemandVideo, MdInsertDriveFile } from "react-icons/md";
 import { IoInfinite } from 'react-icons/io5'
 import { RiFolderDownloadFill } from 'react-icons/ri'
 import { FaMobileAlt } from 'react-icons/fa'
 import { BiTrophy } from 'react-icons/bi'
+import { VscQuestion } from 'react-icons/vsc'
+import { IoMdAlarm }  from 'react-icons/io'
+import { BiPlay } from 'react-icons/bi'
 import './CourseCardSticky.css';
 
+function adjust_img(img){
+    img = img.split('/');
+    img[4] = '750x422';
+    img = img.join('/');
+    return img;
+}
 
-export default function CourseCardSticky({courseData}) {
+function LineDesc({icon, text}){
+    if(text === null) return null;  
+    return (
+        <div className="lineDesc">
+            {icon}
+            <p>{text}</p>
+        </div>
+    );
+}
+
+
+export default function CourseCardSticky({courseData, isCardAppear}) {
     
-    const [x, setX] = useState(true);
-    const price = parseInt(courseData.avg_rating * courseData.num_published_lectures);
-
-    window.onscroll = (e) => {
-        if (window.scrollY > 400) setX(false);
-        if (window.scrollY < 350) setX(true);
-    };
-
     return (
         <div>
-            <div className="hed" style={{ display: x ? "none" : "block", position: "sticky", top: "0", zIndex: "2000" }} >
+            <div className="hed" style={{ display: isCardAppear ? "none" : "block", position: "sticky", top: "0", zIndex: "2000" }} >
             </div>
             <div className="side-bar-container">
-                <img src={courseData.image_750x422} alt="Course img" className="photo" style={{ display: x ? "block" : "none" }} ></img>
-                <div className="child" style={{ position: !x ? "fixed" : null, width: !x ? "20%" : null, top: !x ? "10px" : null, zIndex: "3000" }}>
-                <h2 className="price">E£{price}</h2>
+                <div className="Card_header">
+                    <BiPlay/>
+                    <p className="on_photo">Preview this course</p>
+                    <img src={adjust_img(courseData.img)} alt="Course img" className="photo" style={{ display: isCardAppear ? "block" : "none" }} ></img>
+                </div>
+                <div className="child" style={{ position: !isCardAppear ? "fixed" : null, width: !isCardAppear ? "20%" : null, top: !isCardAppear ? "10px" : null, zIndex: "3000" }}>
+                <div className="price">
+                    <p>E£{courseData.price}</p> 
+                    {courseData.discount_percentage ? <s className="__discount">{courseData.oldprice}</s> : null} 
+                    {courseData.discount_percentage ? <span className="discount_per">{courseData.discount_percentage}% off</span> : null}
+                </div>
+                {
+                    courseData.discount_percentage ?
+                        <div className="expire_date">
+                            <IoMdAlarm/>
+                            <p dangerouslySetInnerHTML={{ __html: courseData.discount_expiration }} />
+                        </div>
+                    : 
+                        null
+                }
                 <div className='sidebar_buttons' >
                     <button className="add-to-cart">Add to cart</button>
                     <button className="buy">Buy now</button>
@@ -32,30 +61,13 @@ export default function CourseCardSticky({courseData}) {
                 <div className="money-back">30-Day Money-Back Guarantee</div>
                 <div className="include">
                     <h6>This course includes:</h6>
-                    <div className='lineDesc'>
-                        <MdOndemandVideo/>
-                        <p>{courseData.content_info_short} hours on-demand video </p>
-                    </div>
-                    <div className='lineDesc'>
-                        <MdInsertDriveFile/>
-                        <p>{courseData.num_article_assets} articles </p>
-                    </div>
-                    <div className='lineDesc'>
-                        <RiFolderDownloadFill/>
-                        <p>{Object.keys(courseData.promo_asset.download_urls).length} downloadable resources</p>
-                    </div>
-                    <div className='lineDesc'>
-                        <IoInfinite/>
-                        <p>Full lifetime access</p>
-                    </div>
-                    <div className='lineDesc'>
-                        <FaMobileAlt/>
-                        <p>Access on mobile and TV</p>
-                    </div>
-                    <div className='lineDesc'>
-                        <BiTrophy/>
-                        <p>Certificate of completion</p>
-                    </div>
+                    <LineDesc icon={<MdOndemandVideo/>} text={courseData.video_content_length}/>
+                    <LineDesc icon={<MdInsertDriveFile/>} text={courseData.num_articles}/>
+                    <LineDesc icon={<RiFolderDownloadFill/>} text={courseData.num_additional_resources}/>
+                    <LineDesc icon={<VscQuestion/>} text={courseData.num_practice_tests}/>
+                    <LineDesc icon={<IoInfinite/>} text={'Full lifetime access'}/>
+                    <LineDesc icon={<FaMobileAlt/>} text={'Access on mobile and TV'}/>
+                    <LineDesc icon={<BiTrophy/>} text={'Certificate of completion'}/>
                 </div>
                 <div className="share-gift-apply">
                     <a href='\#' className='links'>Share</a>

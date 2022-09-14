@@ -1,0 +1,58 @@
+.stickycover {
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1c1d1f;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(0);
+    transition: transform 250ms cubic-bezier(0, 0, 0.38, 0.9);
+    padding: 1rem;
+}
+
+.stickyContainer {
+    position: fixed;
+    top: 5rem;
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.sticky_tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+}
+
+.title_cover {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0rem 0rem;
+}
+
+._rating_cover {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: baseline;
+}
+
+._rate_cover {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    color: orange;
+}
+
+.review_number_cover,
+.review_number_cover:hover {
+    color: #c8bbf5;
+    text-decoration: underline;
+}

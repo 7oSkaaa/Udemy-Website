@@ -9,10 +9,10 @@ function InstructorCard({idx, instructor}){
     
     return (
         <div key={idx} className='instructor-card'>
-            <a href="/#" className="instructor-title"><h5>{instructor.title}</h5></a>
-            <h6 className="job-title">{instructor.job_title}</h6>
+            <a href="/#" className="instructor-title"><h5>{instructor.name}</h5></a>
+            <h6 className="job-title">{instructor.job}</h6>
             <div className="instructor-img-stats">
-                <img className="instructor-img" src={instructor.image_100x100} alt={instructor.title} />
+                <img className="instructor-img" src={instructor.img} alt={instructor.name} />
                 <div className="instructor-stats">
                     <p><FontAwesomeIcon icon={solid("star")} /> {instructor.rating} Instructor Rating</p>
                     <p><FontAwesomeIcon icon={solid("certificate")} /> {instructor.reviews} Reviews</p>
@@ -36,7 +36,7 @@ function InstructorCard({idx, instructor}){
 
 export default function Instructions({courseData}) {
     
-    const InstructorsData = courseData.visible_instructors;
+    const InstructorsData = courseData.instructors;
     const InstructorsList = InstructorsData.map((instructor, idx) => (<InstructorCard key={idx} instructor={instructor} />));
 
     return (

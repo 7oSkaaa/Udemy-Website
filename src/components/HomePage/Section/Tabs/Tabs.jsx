@@ -1,11 +1,14 @@
 import React from "react";
 import './Tabs.css';
+import { CoursesContext } from "../../../CoursesContext";
 
-export default function Tabs({curr_tab, set_curr_tab}) {
+export default function Tabs() {
+
+    const { setCurrTab } = React.useContext(CoursesContext);
 
     const onChange = (event) => {
         const tab_id = event.target.id;
-        set_curr_tab(`${tab_id}_res`);
+        setCurrTab(`${tab_id}_res`);
     }
 
     return (

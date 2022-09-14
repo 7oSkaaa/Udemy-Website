@@ -39,7 +39,12 @@
 
 .col-1,
 .col-2 {
-    text-align: center;
+    text-align: right;
+    align-items: flex-end;
+}
+
+.right_bar {
+    width: fit-content !important;
 }
 
 .show-more-less-btn {

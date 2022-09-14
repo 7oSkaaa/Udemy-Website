@@ -85,6 +85,11 @@
     text-decoration: none;
 }
 
+.__discount-card {
+    font-size: 0.9rem;
+    color: gray;
+}
+
 .course-img:hover {
     -webkit-filter: grayscale(30%);
     filter: grayscale(30%);
