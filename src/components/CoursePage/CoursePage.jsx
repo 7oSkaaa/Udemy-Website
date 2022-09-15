@@ -15,9 +15,9 @@ import { CoursesContext } from "../CoursesContext";
 
 function CourseCardPage({data}) {
     
-    const [ isCoverAppear, set_isCoverAppear ] = useState(false);
-    const [ isCardAppear, set_isCardAppear ] = useState(true);
-    const [ isStickyCardDisappear, set_isStickyCardDisappear ] = useState(false);
+    const [isCoverAppear, set_isCoverAppear] = useState(false);
+    const [isCardAppear, set_isCardAppear] = useState(true);
+    const [isStickyCardDisappear, set_isStickyCardDisappear] = useState(false);
     const { ScreenDimensions } = useContext(CoursesContext);
     const { Mobile, Tablet, Desktop, Large_Desktop } = ScreenDimensions;
 
@@ -26,22 +26,22 @@ function CourseCardPage({data}) {
         const winWidth = window.innerWidth;
         let MaxCoverHeight = 0, MaxCardHeight = 0;
 
-        if(winWidth < Mobile.maxWidth) {
-            MaxCoverHeight = Mobile.coverHeight; 
+        if(winWidth < Mobile.maxWidth){
+            MaxCoverHeight = Mobile.coverHeight;
             MaxCardHeight = Mobile.CardHeight;
-        }
+        } 
         else if(winWidth < Tablet.maxWidth){
-            MaxCoverHeight = Tablet.coverHeight; 
+            MaxCoverHeight = Tablet.coverHeight;
             MaxCardHeight = Tablet.CardHeight;
-        }
+        } 
         else if(winWidth < Desktop.maxWidth){
-            MaxCoverHeight = Desktop.coverHeight; 
+            MaxCoverHeight = Desktop.coverHeight;
             MaxCardHeight = Desktop.CardHeight;
-        }
+        } 
         else {
-            MaxCoverHeight = Large_Desktop.coverHeight; 
+            MaxCoverHeight = Large_Desktop.coverHeight;
             MaxCardHeight = Large_Desktop.CardHeight;
-        }
+        } 
         set_isCardAppear(window.scrollY < MaxCoverHeight);
         set_isCoverAppear(window.scrollY > MaxCoverHeight);
         set_isStickyCardDisappear(window.scrollY > MaxCardHeight);
@@ -63,7 +63,7 @@ function CourseCardPage({data}) {
     )
 }
 
-export default function CoursePage(){
+export default function CoursePage({footerRef}){
 
     const { courseTab, courseIdx } = useParams();
     const { queryCourse } = useContext(CoursesContext);

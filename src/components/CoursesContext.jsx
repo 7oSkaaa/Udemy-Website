@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 import { createContext, useEffect } from "react"
 
 export const CoursesContext = createContext({});
@@ -27,13 +27,13 @@ export const CoursesProvider = (props) => {
             maxWidth: 1440,
             minWidth: 1024,
             coverHeight: 1000,
-            CardHeight: 3200
+            CardHeight: 2500
         },
         Large_Desktop: {
             maxWidth: 3000,
             minWidth: 1440,
             coverHeight: 400,
-            CardHeight: 3200
+            CardHeight: 2500
         }
     }
 
@@ -80,7 +80,7 @@ export const CoursesProvider = (props) => {
         ScreenDimensions,
         queryCourse,
         setCurrTab,
-        setSearchTerm
+        setSearchTerm,
     };
     
     return <CoursesContext.Provider value={coursesContext}>{children}</CoursesContext.Provider>;

@@ -12,7 +12,7 @@ export default function WhatYouLearn({courseData}) {
         <section className='Objectives-card' id="Overview">
             <div className="what-you-learn">
                 <h4>What you'll learn</h4>
-                <div className={showMore ? "what-to-learn-list-flex section_html_show_more" : "what-to-learn-list-flex"}>
+                <div className={!showMore ? "what-to-learn-list-flex section_html_show_more" : "what-to-learn-list-flex"}>
                     {WhatYouLearnList}
                 </div>
                 <ShowLessMore showMore={showMore} set_showMore={set_showMore}/>
