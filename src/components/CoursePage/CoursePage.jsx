@@ -15,16 +15,17 @@ import { CoursesContext } from "../CoursesContext";
 
 function CourseCardPage({data}) {
     
-    const [isCoverAppear, set_isCoverAppear] = useState(false);
-    const [isCardAppear, set_isCardAppear] = useState(true);
-    const [isStickyCardDisappear, set_isStickyCardDisappear] = useState(false);
+    const [ isCoverAppear, set_isCoverAppear ] = useState(false);
+    const [ isCardAppear, set_isCardAppear ] = useState(true);
+    const [ isStickyCardDisappear, set_isStickyCardDisappear ] = useState(false);
     const { ScreenDimensions } = useContext(CoursesContext);
     const { Mobile, Tablet, Desktop, Large_Desktop } = ScreenDimensions;
 
     window.onscroll = (e) => {
+
         const winWidth = window.innerWidth;
-        const winHeight = window.innerHeight;
         let MaxCoverHeight = 0, MaxCardHeight = 0;
+
         if(winWidth < Mobile.maxWidth) {
             MaxCoverHeight = Mobile.coverHeight; 
             MaxCardHeight = Mobile.CardHeight;
@@ -41,7 +42,6 @@ function CourseCardPage({data}) {
             MaxCoverHeight = Large_Desktop.coverHeight; 
             MaxCardHeight = Large_Desktop.CardHeight;
         }
-            console.log(winHeight, window.scrollY);
         set_isCardAppear(window.scrollY < MaxCoverHeight);
         set_isCoverAppear(window.scrollY > MaxCoverHeight);
         set_isStickyCardDisappear(window.scrollY > MaxCardHeight);

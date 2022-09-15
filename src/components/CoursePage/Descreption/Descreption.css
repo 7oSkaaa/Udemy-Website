@@ -19,15 +19,6 @@
     mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
 
-.show-more-less-desc-btn {
-    color: #614fed;
-    font-weight: bold;
-}
-
-.show-more-less-desc-btn:hover {
-    cursor: pointer;
-}
-
 @media only screen and (max-width: 1080px) {
     .description-section {
         width: 100%;
