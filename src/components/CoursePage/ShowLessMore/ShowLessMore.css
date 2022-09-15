@@ -1,0 +1,19 @@
+.section_html_show_more {
+    overflow: hidden;
+    height: fit-content;
+    max-height: 100px;
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
+.section_html {
+    cursor: pointer;
+}
+
+.show-more-less-desc-btn {
+    color: #614fed;
+    font-weight: bold;
+}
+
+.show-more-less-desc-btn:hover {
+    cursor: pointer;
+}
