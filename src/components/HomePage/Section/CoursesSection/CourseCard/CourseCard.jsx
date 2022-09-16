@@ -28,7 +28,7 @@ export default function CourseCard({course}){
     );
     
     return (
-        <OverlayTrigger delay={{ show: 250, hide: 250 }} className='tippycard' overlay={popover} placement='top-end' trigger={['hover', 'focus']} interactive={true}>
+        <OverlayTrigger delay={{ show: 150, hide: 150 }} className='tippycard' overlay={popover} placement='top-end' trigger={['hover', 'focus']} interactive={true}>
             <Link className="course-item" to={`/udemy-home-page-React/course_info/${currTab}/${course.id}`}>
                 <img className="course-img" src={adjust_img(course.img)} alt="course"/>
                 <h3 className="course-title">{course.title}</h3>
