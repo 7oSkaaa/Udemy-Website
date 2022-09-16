@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import HomePage from './components/HomePage';
 import { Routes, Route } from 'react-router-dom';
 import CoursePage from './components/CoursePage/CoursePage';

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef, useEffect } from 'react';
 import './CoursesContent.css';
 import CourseCard from './CourseCard';
 import Carousel from 'react-multi-carousel';
@@ -10,12 +10,17 @@ import { Context } from '../../../Context';
 export default function CoursesContent() {
     
     const { coursesList, currTab, searchTerm, ScreenDimensions } = useContext(Context);
+    const carouselRef = useRef(null);
 
     const checkCourse = (course) => {
         const courseKeys = course.title.toLowerCase().split(' ');
         const SearchTermKeys = searchTerm.toLowerCase().split(' ');
         return SearchTermKeys.every((key) => courseKeys.includes(key)) || course.title.toLowerCase().includes(searchTerm.toLowerCase());
     }
+
+    useEffect(() => {
+        carouselRef.current.goToSlide(0);
+    }, [currTab]);
 
     const { Mobile, Tablet, Desktop, Large_Desktop } = ScreenDimensions;
     const { header, description, title, items:courses } = coursesList[currTab];
@@ -68,7 +73,7 @@ export default function CoursesContent() {
             <div className="courses_cards">
                 {
                     Filtered_Courses.length ?
-                        <Carousel responsive={responsive} containerClass='container' rewind={true} rewindWithAnimation={true}  itemClass='course-item' keyBoardControl={true}  autoPlay={true} autoPlaySpeed={5000} draggable={true} swipeable={true} ssr={true}>
+                        <Carousel responsive={responsive} containerClass='container' rewind={true} rewindWithAnimation={true}  itemClass='course-item' keyBoardControl={true}  autoPlay={true} autoPlaySpeed={5000} draggable={true} swipeable={true} ssr={true} ref={carouselRef}>
                             {Courses_Cards}
                         </Carousel>
                     :
