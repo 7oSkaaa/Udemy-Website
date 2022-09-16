@@ -6,6 +6,22 @@
     margin: 0 auto;
 }
 
+.left_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.right_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
 .section-header {
     width: 70%;
     display: flex;
@@ -35,12 +51,9 @@
     border-left: solid 1px #d1d7dc;
     padding: 15px;
     width: 70%;
-}
-
-.col-1,
-.col-2 {
-    text-align: right;
-    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .right_bar {
@@ -61,7 +74,7 @@
 }
 
 .is_preview {
-    color: #a435f0;
+    color: #614fed;
     text-decoration: underline;
 }
 
@@ -71,16 +84,37 @@
 }
 
 .details {
+    width: 70%;
     font-size: 0.9rem;
     font-family: 'Courier New', Courier, monospace;
-}
-
-.col-8 {
-    width: 62%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 .section-header-info {
     min-width: fit-content;
+}
+
+.expanded_button {
+    display: flex;
+    color: #614fed;
+    border: 0px;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 0.95rem;
+    font-family: 'Courier New', Courier, monospace;
+    width: fit-content;
+}
+
+@media only screen and (max-width: 1440px) {
+    .details {
+        font-size: 0.8rem;
+    }
+    .expanded_button {
+        font-size: 0.8rem;
+    }
 }
 
 @media only screen and (max-width: 1080px) {
@@ -89,7 +123,6 @@
     }
     .section-header,
     .courses-content-header,
-    .course-content p,
     .section-details {
         width: 90%;
         margin: 0.5rem auto;
@@ -97,6 +130,10 @@
     .show-more-less-btn {
         width: 90% !important;
         margin: 0.5rem auto !important;
+    }
+    .details {
+        width: 90%;
+        margin: auto;
     }
 }
 
@@ -115,13 +152,25 @@
         font-size: 0.8rem;
         margin: 0rem 2rem;
     }
+    .details {
+        flex-direction: column;
+    }
 }
 
 @media only screen and (max-width: 425px) {
     .section-details {
         font-size: 0.6rem;
     }
-    .col-8 {
-        width: 55%;
+}
+
+@media only screen and (max-width: 375px) {
+    .details,
+    .expanded_button {
+        font-size: 0.6rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+    .expanded_button {
+        padding: 0rem;
     }
 }

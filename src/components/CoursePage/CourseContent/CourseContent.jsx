@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { VscQuestion } from 'react-icons/vsc'
 import { AiFillPlayCircle } from 'react-icons/ai'
 import { AiOutlineFile } from 'react-icons/ai'
-import { Row, Col } from "react-bootstrap";
 import './CourseContent.css'
 
 const MaxShownSection = 7;
@@ -19,11 +18,15 @@ function Icon({type}){
         
 }
 
-function CurriculumSection({idx, sectionData}){
+function CurriculumSection({idx, sectionData, is_all_expanded}){
 
-    const [is_expanded, set_is_expanded] = React.useState(0);
+    const [is_expanded, set_is_expanded] = React.useState(is_all_expanded);
     const lecture_count = sectionData.totalduration.split(' ')[0];
     const content_length_text = sectionData.totalduration.split(' ').pop();
+    
+    useEffect(() => {
+        set_is_expanded(is_all_expanded);
+    }, [is_all_expanded]);
 
     return (
         <div key={idx}>
@@ -43,20 +46,15 @@ function CurriculumSection({idx, sectionData}){
                 is_expanded ? sectionData.lessons.map((lesson, idx) => { 
                     return (
                         <div key={idx} className='section-details'>
-                            <Row>
-                                <Col xs={1}>
-                                    {<Icon type={lesson.duration}/>}
-                                </Col>
-                                <Col xs={8}>
-                                    <span className={lesson.lessonPreview ? 'is_preview' : ''}>{lesson.name}</span>
-                                </Col>
-                                <Col xs={1}>
-                                    { lesson.lessonPreview ? <span className='is_preview'>Preview</span> : <></> }
-                                </Col>
-                                <Col xs={2}>
-                                    <span className="right_bar">{lesson.duration}</span>
-                                </Col>
-                            </Row>
+                            <div className="left_section">
+                                {<Icon type={lesson.duration}/>}
+                                <span className={lesson.lessonPreview ? 'is_preview' : ''}>{lesson.name}</span>
+                            </div>
+                            <div className="right_section">
+                                { lesson.lessonPreview ? <span className='is_preview'>Preview</span> : <></> }
+                                <span className="right_bar">{lesson.duration}</span>
+
+                            </div>
                         </div>
                     ) }) : <></>
             }
@@ -66,7 +64,8 @@ function CurriculumSection({idx, sectionData}){
 
 export default function CourseContent({courseData}) {
     
-    const [show_more, set_show_more] = React.useState(0);
+    const [show_more, set_show_more] = React.useState(false);
+    const [is_all_expanded, set_is_all_expanded] = React.useState(false);
     const sectionsData = courseData.lectures;
 
     return (
@@ -74,8 +73,11 @@ export default function CourseContent({courseData}) {
             <p className='courses-content-header'>Course content</p>
             <div className="details">
                 <p>{courseData.totallength}</p>
+                <button className="expanded_button" onClick={() => set_is_all_expanded(!is_all_expanded)}>
+                    {is_all_expanded ? "Collapse all sections" : "Expand all sections"}
+                </button>
             </div>
-            {sectionsData.map((e, idx) => ((show_more || idx < MaxShownSection) ? <CurriculumSection key={idx} sectionData={e} /> : <div key={idx}></div> )) }
+            {sectionsData.map((e, idx) => ((show_more || idx < MaxShownSection) ? <CurriculumSection key={idx} sectionData={e} is_all_expanded={is_all_expanded} /> : <div key={idx}></div> )) }
             <div className="show-more-less-btn" onClick={()=>set_show_more(!show_more)}>
                 {
                     show_more ? 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MdOndemandVideo, MdInsertDriveFile } from "react-icons/md";
 import { IoInfinite } from 'react-icons/io5'
 import { RiFolderDownloadFill } from 'react-icons/ri'
@@ -7,7 +7,9 @@ import { BiTrophy } from 'react-icons/bi'
 import { VscQuestion } from 'react-icons/vsc'
 import { IoMdAlarm }  from 'react-icons/io'
 import { BiPlay } from 'react-icons/bi'
+import { CoursesContext } from "../../CoursesContext";
 import './CourseCardSticky.css';
+import Sticky from 'react-stickynode';
 
 function adjust_img(img){
     img = img.split('/');
@@ -26,20 +28,16 @@ function LineDesc({icon, text}){
     );
 }
 
-
-export default function CourseCardSticky({courseData, isCardAppear, isStickyCardDisappear}) {
-    
+function StickyItem({courseData, isCardAppear}){
     return (
         <div>
-            <div className="hed" style={{ display: isCardAppear ? "none" : "block", position: "sticky", top: "0", zIndex: "2000" }} >
-            </div>
             <div className="side-bar-container">
                 <div className="Card_header">
                     <BiPlay/>
                     <p className="on_photo">Preview this course</p>
-                    <img src={adjust_img(courseData.img)} alt="Course img" className="photo" style={{ display: isCardAppear ? "block" : "none" }} ></img>
+                    <img src={adjust_img(courseData.img)} alt="Course img" className={isCardAppear ? 'photo' : 'hidden_img'} ></img>
                 </div>
-                <div className='child' style={{ position: !isCardAppear ? "fixed" : null, width: !isCardAppear ? "20%" : null, top: isStickyCardDisappear? "-25%" : !isCardAppear ? "10px" : null, zIndex: isStickyCardDisappear ? "0" : "3000" }}>
+                <div className={isCardAppear ? 'child' : 'child sticky_sidebar'}>
                 <div className="price">
                     <p>E£{courseData.price}</p> 
                     {courseData.discount_percentage ? <s className="__discount">{courseData.oldprice}</s> : null} 
@@ -70,9 +68,9 @@ export default function CourseCardSticky({courseData, isCardAppear, isStickyCard
                     <LineDesc icon={<BiTrophy/>} text={'Certificate of completion'}/>
                 </div>
                 <div className="share-gift-apply">
-                    <a href='\#' className='links'>Share</a>
-                    <a href='\#' className='links'>Gift this course</a>
-                    <a href='\#' className='links'>Apply Coupon</a>
+                    <a href='/udemy-home-page-React' className='links'>Share</a>
+                    <a href='/udemy-home-page-React' className='links'>Gift this course</a>
+                    <a href='/udemy-home-page-React' className='links'>Apply Coupon</a>
                 </div>
                 <hr/>
                 <h5 className="train">Training 5 or more people?</h5>
@@ -81,5 +79,16 @@ export default function CourseCardSticky({courseData, isCardAppear, isStickyCard
                 </div>
             </div>
         </div>
+    )
+}
+
+export default function CourseCardSticky({courseData, isCardAppear, InBack}) {
+    
+    const { YLimit } = useContext(CoursesContext);
+
+    return (
+        <Sticky bottomBoundary={YLimit} top={100} innerZ={InBack ? 1 : 10} enabled={true} enableTransforms={true}>
+            <StickyItem courseData={courseData} isCardAppear={isCardAppear}/>
+        </Sticky>
     );
 }

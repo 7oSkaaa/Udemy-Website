@@ -1,9 +1,9 @@
 import React from 'react'
-import './Reviews.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import Stars from '../../HomePage/Section/CoursesSection/CourseCard/Stars';
 import { HiOutlineThumbUp, HiOutlineThumbDown } from "react-icons/hi";
+import './Reviews.css'
 
 const MaxShownComments = 3;
 
@@ -18,6 +18,7 @@ function adjustInitial(name, init){
 }
 
 function Review({reviewer}){
+
     return (
         <div className="review_card">
             <div className="user-review">

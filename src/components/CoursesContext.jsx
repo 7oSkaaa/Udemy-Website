@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import { createContext, useEffect } from "react"
 
 export const CoursesContext = createContext({});
@@ -10,6 +10,8 @@ export const CoursesProvider = (props) => {
     const [topCategories, setTopCategories] = useState();
     const [currTab, setCurrTab] = useState("python_res");
     const [searchTerm, setSearchTerm] = useState('');
+    const [YLimit, setYLimit] = useState(0);
+    const YRef = useRef(null);
     const ScreenDimensions = {
         Mobile: {
             maxWidth: 464,
@@ -78,9 +80,12 @@ export const CoursesProvider = (props) => {
         currTab,
         searchTerm,
         ScreenDimensions,
+        YRef,
+        YLimit,
         queryCourse,
         setCurrTab,
         setSearchTerm,
+        setYLimit
     };
     
     return <CoursesContext.Provider value={coursesContext}>{children}</CoursesContext.Provider>;

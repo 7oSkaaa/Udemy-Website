@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { CoursesContext } from '../CoursesContext'
 import './Footer.css'
 
 
 export default function Footer() {
     
+    const { YRef } = useContext(CoursesContext);
+
     return (
-        <footer className='footer'>
+        <footer className='footer' id='_footer' ref={YRef}>
             <div className='topFooter'>
                 <div className='_links'>
                     <a href='/udemy-home-page-React'>Udemy Business</a>
@@ -32,10 +36,10 @@ export default function Footer() {
                     <button className='Globe_Button'><span className="material-symbols-outlined">language</span><span> English</span></button>
                 </div>
             </div>
-            <div className='bottomFooter'>
+            <Link className='bottomFooter' to={'/udemy-home-page-React'}>
                 <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg" alt="udemy logo"/>
                 <p>© 2022 Udemy, Inc.</p>
-            </div>
+            </Link>
             <div className='forSticky'>
             </div>
         </footer>

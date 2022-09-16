@@ -2,18 +2,28 @@
     width: 20%;
     border: 1px solid whitesmoke;
     position: absolute;
-    top: 120px;
     left: 70%;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .child {
+    top: -60px;
     border: 1px solid whitesmoke;
     z-index: 5000;
     background-color: white;
     padding: 1rem 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.sticky_sidebar {
+    position: fixed;
+    z-index: 3000;
+    width: 20%;
+}
+
+.hidden_img {
+    display: none;
 }
 
 .on_footer {
