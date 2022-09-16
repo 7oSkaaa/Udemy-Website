@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { CoursesContext } from '../CoursesContext'
+import { Context } from '../Context'
 import './Footer.css'
 
 
 export default function Footer() {
     
-    const { YRef } = useContext(CoursesContext);
+    const { YRef } = useContext(Context);
 
     return (
         <footer className='footer' id='_footer' ref={YRef}>

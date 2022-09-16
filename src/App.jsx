@@ -5,18 +5,18 @@ import { Routes, Route } from 'react-router-dom';
 import CoursePage from './components/CoursePage/CoursePage';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
-import { CoursesProvider } from './components/CoursesContext';
+import { Provider } from './components/Context';
 
 export default function App() {
         
     return (
-        <CoursesProvider>
+        <Provider>
             <NavBar/>
             <Routes>
                 <Route path="/udemy-home-page-React" element={<HomePage/>} />
                 <Route path="/udemy-home-page-React/course_info/:courseTab/:courseIdx" element={<CoursePage/>} />
             </Routes>
             <Footer/>
-        </CoursesProvider>
+        </Provider>
     )
 }

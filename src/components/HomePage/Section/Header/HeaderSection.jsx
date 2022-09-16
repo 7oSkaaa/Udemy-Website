@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import AboveCourses from "./AboveCourses";
 import Header from "./Header";
-import { CoursesContext } from "../../../CoursesContext";
+import { Context } from "../../../Context";
 
 export default function HeaderSection() {
     
-    const { coursesList } = useContext(CoursesContext);
+    const { coursesList } = useContext(Context);
     
     return (
         <div>

@@ -7,7 +7,7 @@ import Popover from 'react-bootstrap/Popover';
 import { Link } from 'react-router-dom';
 import './CourseCard.css';
 import '../PopupCard/TippyCard.css';
-import { CoursesContext } from '../../../../CoursesContext';
+import { Context } from '../../../../Context';
 
 function adjust_img(img){
     img = img.split('/');
@@ -19,7 +19,7 @@ function adjust_img(img){
 export default function CourseCard({course}){
 
     const instructors = course.instructors.map(instructor => instructor.name).join(', ');
-    const { currTab } = useContext(CoursesContext);
+    const { currTab } = useContext(Context);
     
     const popover = (props) => (
         <Popover id="button-tooltip" {...props}>

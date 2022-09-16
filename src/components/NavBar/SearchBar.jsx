@@ -1,6 +1,6 @@
 import React, { createRef, useContext } from "react";
 import { useNavigate, createSearchParams } from "react-router-dom";
-import { CoursesContext } from "../CoursesContext";
+import { Context } from "../Context";
 import './navbar.css';
 
 export default function SearchBar() {
@@ -8,7 +8,7 @@ export default function SearchBar() {
     const Navigate = useNavigate();
     const SearchSubmitButtonRef = createRef();
     const SearchInputRef = createRef();
-    const { setSearchTerm } = useContext(CoursesContext);
+    const { setSearchTerm } = useContext(Context);
 
     const onClick = (e) => {
 

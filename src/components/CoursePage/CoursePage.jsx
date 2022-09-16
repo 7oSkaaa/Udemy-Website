@@ -11,7 +11,7 @@ import StudentFeedback from './StudentFeedback';
 import Reviews from './Reviews';
 import Loader from '../HomePage/Loader';
 import NavTabs from './NavTabs';
-import { CoursesContext } from "../CoursesContext";
+import { Context } from "../Context";
 
 
 function CourseCardPage({data}) {
@@ -19,7 +19,7 @@ function CourseCardPage({data}) {
     const [isCoverAppear, set_isCoverAppear] = useState(false);
     const [isCardAppear, set_isCardAppear] = useState(true);
     const [InBack, set_InBack] = useState(false);
-    const { ScreenDimensions, YRef, setYLimit, YLimit } = useContext(CoursesContext);
+    const { ScreenDimensions, YRef, setYLimit, YLimit } = useContext(Context);
     const { Mobile, Tablet, Desktop, Large_Desktop } = ScreenDimensions;
     
     window.onscroll = (e) => {
@@ -59,7 +59,7 @@ function CourseCardPage({data}) {
 
 export default function CoursePage(){
     const { courseTab, courseIdx } = useParams();
-    const { queryCourse } = useContext(CoursesContext);
+    const { queryCourse } = useContext(Context);
     const courseData = queryCourse(courseTab, courseIdx);
 
     return courseData ? <CourseCardPage data={courseData}/> : <Loader/> 

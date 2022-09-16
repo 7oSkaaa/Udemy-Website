@@ -5,11 +5,11 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './PopupCard/TippyCard.css';
 import { CgSmileNone } from "react-icons/cg"; 
-import { CoursesContext } from '../../../CoursesContext';
+import { Context } from '../../../Context';
 
 export default function CoursesContent() {
     
-    const { coursesList, currTab, searchTerm, ScreenDimensions } = useContext(CoursesContext);
+    const { coursesList, currTab, searchTerm, ScreenDimensions } = useContext(Context);
 
     const checkCourse = (course) => {
         const courseKeys = course.title.toLowerCase().split(' ');

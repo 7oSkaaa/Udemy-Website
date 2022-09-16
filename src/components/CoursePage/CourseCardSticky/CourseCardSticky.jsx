@@ -7,7 +7,7 @@ import { BiTrophy } from 'react-icons/bi'
 import { VscQuestion } from 'react-icons/vsc'
 import { IoMdAlarm }  from 'react-icons/io'
 import { BiPlay } from 'react-icons/bi'
-import { CoursesContext } from "../../CoursesContext";
+import { Context } from "../../Context";
 import './CourseCardSticky.css';
 import Sticky from 'react-stickynode';
 
@@ -84,7 +84,7 @@ function StickyItem({courseData, isCardAppear}){
 
 export default function CourseCardSticky({courseData, isCardAppear, InBack}) {
     
-    const { YLimit } = useContext(CoursesContext);
+    const { YLimit } = useContext(Context);
 
     return (
         <Sticky bottomBoundary={YLimit} top={100} innerZ={InBack ? 1 : 10} enabled={true} enableTransforms={true}>
