@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/udemy-home-page-React/static/css/main.93e09a3f.css",
-    "main.js": "/udemy-home-page-React/static/js/main.6aa2a60e.js",
+    "main.css": "/udemy-home-page-React/static/css/main.613adf10.css",
+    "main.js": "/udemy-home-page-React/static/js/main.328e34d0.js",
     "static/media/revicons.eot": "/udemy-home-page-React/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/udemy-home-page-React/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/udemy-home-page-React/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/udemy-home-page-React/index.html",
-    "main.93e09a3f.css.map": "/udemy-home-page-React/static/css/main.93e09a3f.css.map",
-    "main.6aa2a60e.js.map": "/udemy-home-page-React/static/js/main.6aa2a60e.js.map"
+    "main.613adf10.css.map": "/udemy-home-page-React/static/css/main.613adf10.css.map",
+    "main.328e34d0.js.map": "/udemy-home-page-React/static/js/main.328e34d0.js.map"
   },
   "entrypoints": [
-    "static/css/main.93e09a3f.css",
-    "static/js/main.6aa2a60e.js"
+    "static/css/main.613adf10.css",
+    "static/js/main.328e34d0.js"
   ]
 }
