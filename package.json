@@ -1,8 +1,8 @@
 {
-    "name": "udemy-home-page",
+    "name": "udemy-website",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://7oskaaa.github.io/udemy-home-page-React/",
+    "homepage": "https://7oskaaa.github.io/Udemy-Website/",
     "dependencies": {
         "-": "^0.0.1",
         "@fortawesome/fontawesome-svg-core": "^6.2.0",
