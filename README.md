@@ -50,7 +50,7 @@ You can run the following command to start the server
 npm start
 ```
 
-You can simply see the webiste on this link [Udemy Website](https://7oskaaa.github.io/udemy-home-page-React/)
+You can simply see the webiste on this link [Udemy Website](https://7oskaaa.github.io/Udemy-Website//)
 
 It's a Demo for the Website and testing it's responsivity:
 
