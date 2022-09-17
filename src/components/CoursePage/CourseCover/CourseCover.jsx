@@ -40,13 +40,13 @@ export default function CourseCover({courseData, isCoverAppear}) {
                 <h3>{courseData.title}</h3>
                 <p className='headline'>{courseData.description}</p>
                 <div className='_rating'>
+                    {courseData.bestseller ? <Badge badge_text={'Bestseller'}/> : null}
                     <div className='_rate'>
                         <span className='rate_number'>{courseData.rating.toPrecision(2)}</span>
                         <Stars rating={courseData.rating}/>
                     </div>
                     <a href='/#' className='review_number'>({courseData.totalreviews} ratings)</a>
                     <span className='subscribers_numbers'>{courseData.enrollments} students</span>
-                    {courseData.bestseller ? <Badge badge_text={'Bestseller'}/> : null}
                 </div>
                     <div className='instructors'>
                         <span className='instructors_name'><span className='Created_By'>Created by </span>{instructors}</span>
