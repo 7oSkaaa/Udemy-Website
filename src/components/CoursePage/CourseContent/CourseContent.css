@@ -14,6 +14,10 @@
     gap: 20px;
 }
 
+.left_section svg {
+    min-width: max-content;
+}
+
 .right_section {
     display: flex;
     flex-direction: row;
@@ -154,6 +158,9 @@
     }
     .details {
         flex-direction: column;
+    }
+    .left_section svg {
+        font-size: 0.8rem;
     }
 }
 
