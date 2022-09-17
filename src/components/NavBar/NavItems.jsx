@@ -7,7 +7,7 @@ export default function NavItems() {
     return (
         <ul className="_nav-items">
             <button className="menu"><i className="fa fa-align-justify"></i></button>
-            <li><Link to={'/udemy-home-page-React'}><img className="logo" src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="Logo" /></Link></li>
+            <li><Link to={'/Udemy-Website/'}><img className="logo" src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="Logo" /></Link></li>
             <li className="_navbar-category"><label>Categories</label></li>
             <SearchBar/>
             <li className="disappear-item" id="udemy-bus"><label>Udemy Business</label></li>

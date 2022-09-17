@@ -28,8 +28,8 @@ export default function CourseCover({courseData, isCoverAppear}) {
         <div className="course-cover">  
             <div className='cover-items'>
                 <Breadcrumb className="breadcrumb _path">
-                    <Breadcrumb.Item linkAs={Link} linkProps={{to: "/udemy-home-page-React/"}}>Home</Breadcrumb.Item>
-                    <Breadcrumb.Item linkAs={HashLink} linkProps={{to: "/udemy-home-page-React/#courses_view"}}>Courses</Breadcrumb.Item>
+                    <Breadcrumb.Item linkAs={Link} linkProps={{to: "/Udemy-Website/"}}>Home</Breadcrumb.Item>
+                    <Breadcrumb.Item linkAs={HashLink} linkProps={{to: "/Udemy-Website/#courses_view"}}>Courses</Breadcrumb.Item>
                     <Breadcrumb.Item active>{currCategory}</Breadcrumb.Item>
                 </Breadcrumb>
                 <div className="Card_header_cover hidden_items">
