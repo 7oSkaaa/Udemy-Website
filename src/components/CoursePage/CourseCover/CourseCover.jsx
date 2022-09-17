@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Stars from '../../HomePage/Section/CoursesSection/CourseCard/Stars'
 import Badge from '../../HomePage/Section/CoursesSection/Badge'
 import StickyCover from '../StickyCover' 
 import { MdNewReleases, MdLanguage, MdClosedCaption } from 'react-icons/md'
+import { Context } from '../../Context'
 import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
 import { Breadcrumb } from "react-bootstrap"
@@ -19,7 +20,9 @@ function adjust_img(img){
 
 export default function CourseCover({courseData, isCoverAppear}) {
 
-    const instructors = courseData.instructors.map((instructor, idx) => <a key={idx} href='/#' className='instructors_name'>{instructor.name}</a>);
+    const instructors = courseData.instructors.map(instructor => instructor.name).join(', ');
+    const { currTab, Categories } = useContext(Context);
+    const currCategory = Categories[currTab];
 
     return (
         <div className="course-cover">  
@@ -27,7 +30,7 @@ export default function CourseCover({courseData, isCoverAppear}) {
                 <Breadcrumb className="breadcrumb _path">
                     <Breadcrumb.Item linkAs={Link} linkProps={{to: "/udemy-home-page-React/"}}>Home</Breadcrumb.Item>
                     <Breadcrumb.Item linkAs={HashLink} linkProps={{to: "/udemy-home-page-React/#courses_view"}}>Courses</Breadcrumb.Item>
-                    <Breadcrumb.Item active>{courseData.title}</Breadcrumb.Item>
+                    <Breadcrumb.Item active>{currCategory}</Breadcrumb.Item>
                 </Breadcrumb>
                 <div className="Card_header_cover hidden_items">
                     <BiPlay/>
@@ -46,8 +49,7 @@ export default function CourseCover({courseData, isCoverAppear}) {
                     {courseData.bestseller ? <Badge badge_text={'Bestseller'}/> : null}
                 </div>
                     <div className='instructors'>
-                        <p>Created by </p>
-                        {instructors}
+                        <span className='instructors_name'><span className='Created_By'>Created by </span>{instructors}</span>
                     </div>
                     <div className='additional_info'>
                         <div className='last_update_date'>

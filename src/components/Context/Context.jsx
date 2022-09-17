@@ -12,6 +12,15 @@ export const Provider = (props) => {
     const [searchTerm, setSearchTerm] = useState('');
     const [YLimit, setYLimit] = useState(0);
     const YRef = useRef(null);
+    const Categories = {
+        "python_res": "Python",
+        "javascript_res": "JavaScript",
+        "data_res": "Data Science",
+        "web_res": "Web Development",
+        "aws_res": "AWS",
+        "excel_res": "Excel",
+        "draw_res": "Drawing"
+    }
     const ScreenDimensions = {
         Mobile: {
             maxWidth: 464,
@@ -78,6 +87,7 @@ export const Provider = (props) => {
         ScreenDimensions,
         YRef,
         YLimit,
+        Categories,
         queryCourse,
         setCurrTab,
         setSearchTerm,

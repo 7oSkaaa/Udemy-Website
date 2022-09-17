@@ -70,14 +70,27 @@
 
 .instructors {
     display: flex;
+    flex-direction: row;
     gap: 1rem;
     font-weight: 100;
     font-size: 0.9rem;
 }
 
+.Created_By {
+    width: max-content;
+    color: white;
+}
+
 .instructors_name,
 .instructors_name:hover {
     color: #c8bbf5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-wrap: wrap;
+    margin: 0.5rem 0rem;
 }
 
 .additional_info {
@@ -319,6 +332,9 @@
     .review_number,
     .subscribers_numbers {
         font-size: 0.7rem;
+    }
+    .breadcrumb {
+        font-size: 0.8rem;
     }
 }
 
