@@ -3,6 +3,7 @@
     border: 1px solid whitesmoke;
     position: absolute;
     left: 70%;
+    top: 60px;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
 }
@@ -20,14 +21,12 @@
     position: fixed;
     z-index: 3000;
     width: 20%;
+    animation: fade 2s linear;
+    translate: fade 2s linear;
 }
 
 .hidden_img {
     display: none;
-}
-
-.on_footer {
-    z-index: 0;
 }
 
 .photo {

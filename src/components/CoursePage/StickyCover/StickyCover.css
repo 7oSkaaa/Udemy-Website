@@ -3,7 +3,8 @@
     top: 0;
     z-index: 5;
     display: flex;
-    color: #fff;
+    flex-direction: row;
+    color: white;
     flex-direction: column;
     justify-content: space-between;
     background-color: #1c1d1f;
@@ -12,6 +13,39 @@
     transform: translateY(0);
     transition: transform 250ms cubic-bezier(0, 0, 0.38, 0.9);
     padding: 1rem;
+}
+
+.buy_now_cover {
+    background: white;
+    border: 1px solid white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    width: max-content;
+    display: none;
+}
+
+.sticky_cover_left {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: white;
+}
+
+.sticky_cover_right {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: baseline;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.course_price_cover {
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: none;
 }
 
 .stickyContainer {
@@ -35,6 +69,11 @@
     font-size: 1.1rem;
     font-weight: bold;
     margin: 0rem 0rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 ._rating_cover {
@@ -55,4 +94,51 @@
 .review_number_cover:hover {
     color: #c8bbf5;
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 1080px) {
+    .stickycover {
+        top: auto;
+        bottom: 0;
+        flex-direction: row;
+        box-shadow: 0 -2px 4px rgb(0 0 0 / 8%), 0 -4px 12px rgb(0 0 0 / 8%);
+    }
+    ._rating_cover {
+        font-size: 0.8rem;
+    }
+    .title_cover {
+        font-size: 0.9rem;
+    }
+    .buy_now_cover,
+    .course_price_cover {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .sticky_cover_left {
+        display: none;
+    }
+    .stickycover {
+        background: white;
+        color: black;
+        padding: 0.1rem;
+    }
+    .course_price_cover {
+        color: black;
+        margin: 0rem;
+        padding: 0.2rem;
+        font-size: 0.9rem;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .sticky_cover_right {
+        width: 100%;
+    }
+    .buy_now_cover {
+        color: white;
+        background: black;
+        width: 100%;
+        font-size: 0.9rem;
+    }
 }

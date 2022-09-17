@@ -1,8 +1,6 @@
 .footer {
     background-color: #1c1d1f;
     padding: 2rem;
-    overflow-y: auto;
-    position: relative;
     z-index: 10;
 }
 

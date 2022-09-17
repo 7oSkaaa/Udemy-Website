@@ -23,9 +23,10 @@ function CourseCardPage({data}) {
     const { Mobile, Tablet, Desktop, Large_Desktop } = ScreenDimensions;
     
     window.onscroll = (e) => {
-
+    
         const winWidth = window.innerWidth;
         const winHeight = window.innerHeight;
+        const SmallScreen = 1080;
         setYLimit(YRef.current.offsetTop - winHeight);
         let MaxCoverHeight = 0;
         if(winWidth < Mobile.maxWidth)
@@ -37,7 +38,7 @@ function CourseCardPage({data}) {
         else 
             MaxCoverHeight = Large_Desktop.coverHeight;
         set_isCardAppear(window.scrollY < MaxCoverHeight);
-        set_isCoverAppear(window.scrollY > MaxCoverHeight);
+        set_isCoverAppear(window.scrollY > MaxCoverHeight || winWidth <= SmallScreen);
         set_InBack(window.scrollY > YLimit);
     };
 
@@ -58,6 +59,7 @@ function CourseCardPage({data}) {
 }
 
 export default function CoursePage(){
+
     const { courseTab, courseIdx } = useParams();
     const { queryCourse } = useContext(Context);
     const courseData = queryCourse(courseTab, courseIdx);
