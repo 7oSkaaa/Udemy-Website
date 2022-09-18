@@ -12,6 +12,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
+    width: -webkit-fill-available;
 }
 
 .right_section {
@@ -98,8 +99,8 @@
     min-width: fit-content;
 }
 
-.content_icon {
-    width: 10%;
+.content_icon svg {
+    width: 100%;
 }
 
 .expanded_button {
@@ -149,6 +150,9 @@
     .section-details {
         font-size: 0.7rem;
     }
+    .content_icon svg {
+        font-size: 0.8rem;
+    }
     .section-header {
         display: flex;
         flex-flow: column;
@@ -168,6 +172,9 @@
         margin: 0rem auto;
         width: auto;
     }
+    .content_icon svg {
+        font-size: 0.7rem;
+    }
 }
 
 @media only screen and (max-width: 375px) {
@@ -177,5 +184,8 @@
     }
     .expanded_button {
         padding: 0rem;
+    }
+    .content_icon svg {
+        font-size: 0.7rem;
     }
 }
