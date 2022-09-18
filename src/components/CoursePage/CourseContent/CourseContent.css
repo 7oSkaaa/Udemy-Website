@@ -99,8 +99,9 @@
     min-width: fit-content;
 }
 
-.content_icon svg {
-    width: 100%;
+.left_section>svg {
+    width: auto;
+    max-width: 10%;
 }
 
 .expanded_button {
