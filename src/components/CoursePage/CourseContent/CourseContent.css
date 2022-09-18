@@ -60,7 +60,7 @@
 }
 
 .right_bar {
-    width: -webkit-fill-available;
+    width: max-content;
 }
 
 .show-more-less-btn {
