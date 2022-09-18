@@ -14,11 +14,6 @@
     gap: 20px;
 }
 
-.left_section svg {
-    min-width: max-content;
-    max-width: max-content;
-}
-
 .right_section {
     display: flex;
     flex-direction: row;
