@@ -104,8 +104,7 @@
 }
 
 .content_icon {
-    min-width: max-content;
-    max-width: 10%;
+    width: 10%;
 }
 
 .expanded_button {
