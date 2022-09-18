@@ -58,6 +58,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    max-width: 90%;
 }
 
 .right_bar {
@@ -167,6 +168,8 @@
 @media only screen and (max-width: 425px) {
     .section-details {
         font-size: 0.6rem;
+        margin: 0rem auto;
+        width: auto;
     }
 }
 
@@ -174,8 +177,6 @@
     .details,
     .expanded_button {
         font-size: 0.6rem;
-        margin-top: 0rem;
-        margin-bottom: 0rem;
     }
     .expanded_button {
         padding: 0rem;

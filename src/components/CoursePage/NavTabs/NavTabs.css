@@ -62,6 +62,9 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+    .nav-tabs {
+        width: 100%;
+    }
     .nav-link,
     .nav-link.active {
         text-align: center;
