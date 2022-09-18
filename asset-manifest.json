@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Udemy-Website/static/css/main.7ed392b9.css",
+    "main.css": "/Udemy-Website/static/css/main.1d6f86e6.css",
     "main.js": "/Udemy-Website/static/js/main.7d5d45b9.js",
     "static/media/revicons.eot": "/Udemy-Website/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/Udemy-Website/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/Udemy-Website/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/Udemy-Website/index.html",
-    "main.7ed392b9.css.map": "/Udemy-Website/static/css/main.7ed392b9.css.map",
+    "main.1d6f86e6.css.map": "/Udemy-Website/static/css/main.1d6f86e6.css.map",
     "main.7d5d45b9.js.map": "/Udemy-Website/static/js/main.7d5d45b9.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ed392b9.css",
+    "static/css/main.1d6f86e6.css",
     "static/js/main.7d5d45b9.js"
   ]
 }
