@@ -47,7 +47,7 @@ function CurriculumSection({idx, sectionData, is_all_expanded}){
                     return (
                         <div key={idx} className='section-details'>
                             <div className="left_section">
-                                {<Icon type={lesson.duration}/>}
+                                <span className="content_icon">{<Icon type={lesson.duration}/>}</span>
                                 <span className={lesson.lessonPreview ? 'is_preview' : ''}>{lesson.name}</span>
                             </div>
                             <div className="right_section">
