@@ -8,6 +8,14 @@
     position: absolute;
 }
 
+.course_card_title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .seller_info {
     display: flex;
     flex-direction: row;
@@ -42,9 +50,11 @@
     font-size: 0.9rem;
 }
 
-.course_card_hover h2 {
+.course_card_title,
+.course_card_title:hover {
     font-size: 1.2rem;
     font-weight: bold;
+    color: black;
 }
 
 .hoverbuttons {

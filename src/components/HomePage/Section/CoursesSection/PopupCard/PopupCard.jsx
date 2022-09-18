@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ObjComp from './ObjComp';
 import Date from './Date';
 import Badge from '../Badge';
-
+import { Context } from '../../../../Context';
 
 export default function PopupCard({course}){
 
     const totalHours = course.video_content_length.split(' ')[0];
+    const { currTab } = useContext(Context);
 
     return (
         <div className="course_card_hover">
-            <h2 className="course_card_title">{course.title}</h2>
+            <a href={`/Udemy-Website/course_info/${currTab}/${course.id}`} className="course_card_title">{course.title}</a>
             <div className='seller_info'>
                 {course.bestseller ? <Badge badge_text={'Bestseller'}/> : <></>}
                 <Date date={course.lastupdated}/>

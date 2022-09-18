@@ -12,7 +12,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
-    width: -webkit-fill-available;
+    width: 70%;
 }
 
 .right_section {
@@ -21,7 +21,14 @@
     justify-content: flex-end;
     align-items: center;
     gap: 20px;
-    width: -webkit-fill-available;
+}
+
+.lesson_name {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .section-header {
@@ -101,7 +108,7 @@
 }
 
 .left_section>svg {
-    width: auto;
+    width: max-content;
     max-width: 10%;
 }
 
