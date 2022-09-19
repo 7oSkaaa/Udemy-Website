@@ -14,7 +14,7 @@ export const Provider = (props) => {
     const YRef = useRef(null);
     const Categories = {
         "python_res": "Python",
-        "javascript_res": "JavaScript",
+        "js_res": "JavaScript",
         "data_res": "Data Science",
         "web_res": "Web Development",
         "aws_res": "AWS",
