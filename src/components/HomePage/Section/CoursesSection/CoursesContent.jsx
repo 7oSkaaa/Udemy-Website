@@ -1,11 +1,12 @@
 import React, { useContext, useRef, useEffect } from 'react';
-import './CoursesContent.css';
 import CourseCard from './CourseCard';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './PopupCard/TippyCard.css';
 import { CgSmileNone } from "react-icons/cg"; 
 import { Context } from '../../../Context';
+import { Link } from 'react-router-dom';
+import './CoursesContent.css';
 
 export default function CoursesContent() {
     
@@ -68,7 +69,7 @@ export default function CoursesContent() {
             <div className="courses_content_descreption">
                 <h2>{header}</h2>
                 <p>{description}</p>
-                <a className="explore" href="/udemy-home-page-React">Explore {title}</a>
+                <Link className="explore" to={"/"}>Explore {title}</Link>
             </div>
             <div className="courses_cards">
                 {

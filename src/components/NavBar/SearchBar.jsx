@@ -18,7 +18,7 @@ export default function SearchBar() {
 
         Navigate(
             {
-                pathname: "/Udemy-Website",
+                pathname: "/",
                 search: searchTerm ? `?${createSearchParams({query: searchTerm})}` : ""
             }
         )

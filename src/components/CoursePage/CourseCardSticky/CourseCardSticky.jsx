@@ -8,6 +8,7 @@ import { VscQuestion } from 'react-icons/vsc'
 import { IoMdAlarm }  from 'react-icons/io'
 import { BiPlay } from 'react-icons/bi'
 import { Context } from "../../Context";
+import { Link } from "react-router-dom";
 import './CourseCardSticky.css';
 import Sticky from 'react-stickynode';
 
@@ -29,6 +30,9 @@ function LineDesc({icon, text}){
 }
 
 function StickyItem({courseData, isCardAppear}){
+
+    const { currTab } = useContext(Context); 
+
     return (
         <div>
             <div className="side-bar-container">
@@ -68,9 +72,9 @@ function StickyItem({courseData, isCardAppear}){
                         <LineDesc icon={<BiTrophy/>} text={'Certificate of completion'}/>
                     </div>
                     <div className="share-gift-apply">
-                        <a href='/udemy-home-page-React' className='links'>Share</a>
-                        <a href='/udemy-home-page-React' className='links'>Gift this course</a>
-                        <a href='/udemy-home-page-React' className='links'>Apply Coupon</a>
+                        <Link to={`/course_info/${currTab}/${courseData.id}`} className='links'>Share</Link>
+                        <Link to={`/course_info/${currTab}/${courseData.id}`} className='links'>Gift this course</Link>
+                        <Link to={`/course_info/${currTab}/${courseData.id}`} className='links'>Apply Coupon</Link>
                     </div>
                     <hr/>
                     <h5 className="train">Training 5 or more people?</h5>

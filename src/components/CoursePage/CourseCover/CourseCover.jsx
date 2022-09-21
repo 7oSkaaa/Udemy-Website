@@ -28,8 +28,8 @@ export default function CourseCover({courseData, isCoverAppear}) {
         <div className="course-cover">  
             <div className='cover-items'>
                 <Breadcrumb className="breadcrumb _path">
-                    <Breadcrumb.Item linkAs={Link} linkProps={{to: "/Udemy-Website/"}}>Home</Breadcrumb.Item>
-                    <Breadcrumb.Item linkAs={HashLink} linkProps={{to: "/Udemy-Website/#courses_view"}}>Courses</Breadcrumb.Item>
+                    <Breadcrumb.Item linkAs={Link} linkProps={{to: "/"}}>Home</Breadcrumb.Item>
+                    <Breadcrumb.Item linkAs={HashLink} linkProps={{to: "/#courses_view"}}>Courses</Breadcrumb.Item>
                     <Breadcrumb.Item active>{currCategory}</Breadcrumb.Item>
                 </Breadcrumb>
                 <div className="Card_header_cover hidden_items">
@@ -45,7 +45,7 @@ export default function CourseCover({courseData, isCoverAppear}) {
                         <span className='rate_number'>{courseData.rating.toPrecision(2)}</span>
                         <Stars rating={courseData.rating}/>
                     </div>
-                    <a href='/#' className='review_number'>({courseData.totalreviews} ratings)</a>
+                    <Link to={`/course_info/${currTab}/${courseData.id}`} className='review_number'>({courseData.totalreviews} ratings)</Link>
                     <span className='subscribers_numbers'>{courseData.enrollments} students</span>
                 </div>
                     <div className='instructors'>

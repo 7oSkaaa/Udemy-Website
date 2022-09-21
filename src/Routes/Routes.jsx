@@ -6,8 +6,8 @@ import CoursePage from '../components/CoursePage/CoursePage';
 export default function RoutesPages() {
     return (
         <Routes>
-            <Route path="/Udemy-Website/" element={<HomePage/>} />
-            <Route path="/Udemy-Website/course_info/:courseTab/:courseIdx" element={<CoursePage/>} />
+            <Route path="/" element={<HomePage/>} />
+            <Route path="/course_info/:courseTab/:courseIdx" element={<CoursePage/>} />
         </Routes>
     )
 }
