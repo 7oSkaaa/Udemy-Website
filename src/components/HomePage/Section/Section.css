@@ -1,0 +1,26 @@
+section {
+    width: 85%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+@media only screen and (max-width: 1400px) {
+    section {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    section {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    section {
+        width: 100%;
+    }
+}

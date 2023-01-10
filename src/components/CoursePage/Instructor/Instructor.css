@@ -1,0 +1,65 @@
+.instructors_section {
+    width: 60%;
+    margin: 2rem auto;
+}
+
+.instructor {
+    width: 70%;
+}
+
+.instructor h4 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1rem 0rem;
+}
+
+.instructor-title {
+    color: #5624d0;
+}
+
+.show {
+    color: #5624d0;
+}
+
+.instructor-card {
+    margin: 2rem 0rem;
+}
+
+.instructor-img-stats {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 1rem 0rem;
+}
+
+.instructor-img {
+    border-radius: 60%;
+    display: block;
+    margin: auto 1rem;
+    width: 15%;
+}
+
+.instructor-stats {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.instructor-stats p {
+    margin: 0rem 0rem;
+    font-size: 0.9rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media only screen and (max-width: 1080px) {
+    .instructors_section {
+        width: 100%;
+    }
+    .instructor {
+        width: 90%;
+        margin: auto;
+    }
+    .instructor-card p {
+        font-size: 0.9rem;
+    }
+}

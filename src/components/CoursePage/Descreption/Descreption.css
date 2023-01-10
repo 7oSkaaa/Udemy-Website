@@ -1,0 +1,30 @@
+.description-section {
+    width: 60%;
+    margin: 2rem auto;
+}
+
+.description h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.description {
+    width: 70%;
+    line-height: 1.25
+}
+
+.description-html_show_more {
+    overflow: hidden;
+    height: 200px;
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
+@media only screen and (max-width: 1080px) {
+    .description-section {
+        width: 100%;
+    }
+    .description {
+        width: 90%;
+        margin: auto;
+    }
+}

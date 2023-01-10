@@ -1,0 +1,30 @@
+.requirements-section {
+    width: 60%;
+    margin: 2rem auto;
+}
+
+.requirements {
+    width: 70%;
+}
+
+.requirements h4 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1rem 0rem;
+}
+
+.requirements-list {
+    list-style-type: disc;
+    font-size: 0.9rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media only screen and (max-width: 1080px) {
+    .requirements-section {
+        width: 100%;
+    }
+    .requirements {
+        width: 90%;
+        margin: auto;
+    }
+}

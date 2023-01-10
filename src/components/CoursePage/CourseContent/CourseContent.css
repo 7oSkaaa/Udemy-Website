@@ -1,0 +1,200 @@
+.course-content {
+    margin-top: 30px;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.left_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    width: 70%;
+}
+
+.right_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.lesson_name {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.section-header {
+    width: 70%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    border: solid 1px #d1d7dc;
+    padding: 10px;
+    background-color: #f7f9fa;
+    padding: 15px;
+}
+
+.section-header-title {
+    font-weight: bold;
+}
+
+.section-header-title svg {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.section-header-title:hover {
+    cursor: pointer
+}
+
+.section-details {
+    border-right: solid 1px #d1d7dc;
+    border-left: solid 1px #d1d7dc;
+    padding: 15px;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 90%;
+}
+
+.right_bar {
+    width: max-content;
+}
+
+.show-more-less-btn {
+    width: 70%;
+    border: solid 1px black;
+    padding: 10px;
+    margin: 10px 0px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.show-more-less-btn:hover {
+    cursor: pointer
+}
+
+.is_preview {
+    color: #614fed;
+    text-decoration: underline;
+}
+
+.courses-content-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.details {
+    width: 70%;
+    font-size: 0.9rem;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.section-header-info {
+    min-width: fit-content;
+}
+
+.left_section>svg {
+    width: max-content;
+    max-width: 10%;
+}
+
+.expanded_button {
+    display: flex;
+    color: #614fed;
+    border: 0px;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 0.95rem;
+    font-family: 'Courier New', Courier, monospace;
+    width: fit-content;
+}
+
+@media only screen and (max-width: 1440px) {
+    .details {
+        font-size: 0.8rem;
+    }
+    .expanded_button {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .course-content {
+        width: 100%;
+    }
+    .section-header,
+    .courses-content-header,
+    .section-details {
+        width: 90%;
+        margin: 0.5rem auto;
+    }
+    .show-more-less-btn {
+        width: 90% !important;
+        margin: 0.5rem auto !important;
+    }
+    .details {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .section-header-title {
+        font-size: 0.8rem;
+    }
+    .section-details {
+        font-size: 0.7rem;
+    }
+    .content_icon svg {
+        font-size: 0.8rem;
+    }
+    .section-header {
+        display: flex;
+        flex-flow: column;
+    }
+    .section-header-info {
+        font-size: 0.8rem;
+        margin: 0rem 2rem;
+    }
+    .details {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .section-details {
+        font-size: 0.6rem;
+        margin: 0rem auto;
+        width: auto;
+    }
+    .content_icon svg {
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .details,
+    .expanded_button {
+        font-size: 0.6rem;
+    }
+    .expanded_button {
+        padding: 0rem;
+    }
+    .content_icon svg {
+        font-size: 0.7rem;
+    }
+}

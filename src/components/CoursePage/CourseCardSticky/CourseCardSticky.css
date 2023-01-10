@@ -1,0 +1,238 @@
+.side-bar-container {
+    width: 20%;
+    border: 1px solid whitesmoke;
+    position: absolute;
+    left: 70%;
+    top: 60px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.child {
+    top: -60px;
+    border: 1px solid whitesmoke;
+    z-index: 5000;
+    background-color: white;
+    padding: 1rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.sticky_sidebar {
+    position: fixed;
+    z-index: 3000;
+    width: 20%;
+    animation: fade 2s linear;
+    translate: fade 2s linear;
+}
+
+.hidden_img {
+    display: none;
+}
+
+.photo {
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+}
+
+.price p {
+    font-weight: bolder;
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+.__discount {
+    font-weight: bolder;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: gray;
+}
+
+.discount_per {
+    font-weight: 500;
+    font-size: 1.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Card_header {
+    position: relative;
+    background: black;
+    overflow: hidden;
+}
+
+.on_photo {
+    position: absolute;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    top: 90%;
+    left: 50%;
+    width: max-content;
+    z-index: 1000;
+}
+
+.Card_header svg {
+    position: absolute;
+    font-size: 5rem;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    z-index: 1000;
+}
+
+.Card_header svg {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.expire_date {
+    font-weight: 500;
+    font-size: 1.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    color: #c80011;
+}
+
+.add-to-cart {
+    width: 100%;
+    background-color: #a435f0;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    height: 6vh;
+    margin: 0.5rem auto;
+}
+
+.buy {
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    height: 6vh;
+    margin: 0.5rem auto;
+}
+
+.sidebar_buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.money-back {
+    font-size: 12px;
+    text-align: center;
+    margin: 1rem 0rem;
+}
+
+.include {
+    padding: 1rem;
+}
+
+h6 {
+    font-weight: bold;
+}
+
+.lineDesc {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.lineDesc p {
+    font-size: 0.8rem;
+}
+
+.share-gift-apply {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.links:hover {
+    color: black;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    width: fit-content;
+    color: black;
+}
+
+.train {
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+
+.get {
+    font-size: 0.9rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.try {
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: white;
+    font-weight: bold;
+    height: 6vh;
+}
+
+.buy:hover,
+.try:hover {
+    background-color: whitesmoke;
+}
+
+.add-to-cart:hover {
+    background-color: #6b1ba0;
+}
+
+@media only screen and (max-width: 1440px) {
+    .price p {
+        font-size: 1.5rem;
+    }
+    .__discount,
+    .discount_per {
+        font-size: 1rem;
+    }
+    .expire_date {
+        font-size: 0.9rem;
+    }
+    .on_photo {
+        font-size: 1rem;
+    }
+    .Card_header svg {
+        font-size: 4rem;
+        padding: 0.2rem 0.2rem 0.2rem 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .side-bar-container {
+        display: none;
+    }
+}

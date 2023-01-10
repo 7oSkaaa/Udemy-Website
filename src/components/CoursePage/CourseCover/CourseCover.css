@@ -1,0 +1,349 @@
+.course-cover {
+    color: white;
+    background-color: #1c1d1f;
+}
+
+.review_number:hover {
+    color: #c8bbf5;
+}
+
+.cover-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    margin: auto;
+    padding: 2rem 0rem;
+}
+
+.hidden_items {
+    display: none;
+}
+
+.cover-items h3 {
+    font-weight: bold;
+    max-width: 70%;
+    font-size: 2rem;
+}
+
+.breadcrumb a {
+    color: #c8bbf5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: var(--bs-breadcrumb-divider, ">");
+    color: whitesmoke;
+}
+
+.headline {
+    font-size: 1.2rem;
+    margin: 1rem 0rem;
+    max-width: 70%;
+}
+
+._rating {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0rem;
+    gap: 0.5rem;
+    align-items: baseline;
+    width: 100%;
+}
+
+.rate_number {
+    font-weight: bold;
+    color: orange;
+}
+
+.review_number {
+    color: #c8bbf5;
+    font-size: 0.8rem;
+}
+
+.subscribers_numbers {
+    font-size: 0.9rem;
+    font-weight: 100;
+}
+
+.instructors {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+.Created_By {
+    width: max-content;
+    color: white;
+}
+
+.instructors_name,
+.instructors_name:hover {
+    color: #c8bbf5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-wrap: wrap;
+    margin: 0.5rem 0rem;
+}
+
+.additional_info {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin: 1rem 0rem;
+    font-size: 1rem;
+}
+
+.language,
+.caption,
+.last_update_date {
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+}
+
+.language svg,
+.caption svg,
+.last_update_date svg {
+    font-size: 1.2rem;
+}
+
+.Card_header_cover {
+    position: relative;
+    margin: 1rem 0rem;
+    background: black;
+    overflow: hidden;
+}
+
+.on_photo_cover {
+    position: absolute;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    top: 90%;
+    left: 50%;
+    width: max-content;
+    z-index: 1000;
+}
+
+.Card_header_cover svg {
+    position: absolute;
+    font-size: 5rem;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    z-index: 1000;
+}
+
+.Card_header_cover svg {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.photo_cover {
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.price_cover {
+    font-size: 1.5rem;
+}
+
+.add-to-cart-cover {
+    width: 100%;
+    background-color: #a435f0;
+    color: white;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    height: 6vh;
+    margin: 0.5rem auto;
+}
+
+.money-back-cover {
+    text-align: center;
+    margin: 1rem auto;
+    font-size: 0.8rem;
+}
+
+.share-gift-apply-cover {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    color: white;
+}
+
+.links-cover,
+.links-cover:hover {
+    color: white;
+}
+
+.__discount-cover {
+    color: gray;
+}
+
+._rate {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+@media only screen and (max-width: 1080px) {
+    .cover-items {
+        width: 80%;
+        margin: auto;
+    }
+    .cover-items h3 {
+        max-width: 100%;
+    }
+    .headline {
+        max-width: 100%;
+    }
+    .hidden_items {
+        display: initial;
+    }
+    .course-cover h3 {
+        font-size: 1.2rem;
+    }
+    .headline {
+        font-size: 0.8rem;
+        margin: 0rem 0rem;
+    }
+    ._rating,
+    .review_number,
+    .subscribers_numbers {
+        font-size: 0.8rem;
+        margin: 0.2rem 0rem;
+    }
+    ._rating svg {
+        font-size: 0.7rem;
+    }
+    .instructors {
+        font-size: 0.7rem;
+        margin: 0rem 0rem;
+    }
+    .additional_info {
+        flex-direction: column;
+        font-size: 0.7rem;
+        margin: 0rem 0rem;
+        gap: 0rem;
+    }
+    .language,
+    .caption,
+    .last_update_date {
+        flex-direction: row;
+        justify-content: start;
+        align-items: flex-start;
+    }
+    .share-gift-apply-cover {
+        font-size: 0.7rem;
+    }
+    .__discount-cover {
+        color: gray;
+    }
+    ._rate {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        gap: 0.5rem;
+    }
+    .stars svg {
+        font-size: 1rem;
+    }
+    .price_cover {
+        display: flex !important;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .__discount_cover {
+        font-weight: bolder;
+        font-size: 1.5rem;
+        font-family: 'Times New Roman', Times, serif;
+        color: gray;
+    }
+    .discount_per_cover {
+        font-weight: 500;
+        font-size: 1.5rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .expire_date_cover {
+        font-weight: 500;
+        font-size: 1.2rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        display: flex;
+        align-items: baseline;
+        gap: 0.5rem;
+        color: #ffa5a0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    ._rating {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.7rem;
+        gap: 0rem;
+    }
+    .price_cover {
+        font-size: 1.2rem;
+        justify-content: baseline;
+        align-items: baseline;
+    }
+    .__discount_cover {
+        font-size: 1rem;
+    }
+    .on_photo_cover {
+        font-size: 0.8rem;
+    }
+    .Card_header_cover svg {
+        font-size: 4rem;
+        padding: 0.2rem 0.2rem 0.2rem 0.5rem;
+    }
+    .discount_per_cover {
+        font-size: 1rem;
+    }
+    .expire_date_cover {
+        font-size: 0.8rem;
+    }
+    .course-cover h3 {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    .headline,
+    .stars svg,
+    .review_number,
+    .subscribers_numbers {
+        font-size: 0.7rem;
+    }
+    .breadcrumb {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .on_photo_cover {
+        font-size: 0.8rem;
+    }
+    .Card_header_cover svg {
+        font-size: 3rem;
+        padding: 0.2rem 0.2rem 0.2rem 0.5rem;
+    }
+}
